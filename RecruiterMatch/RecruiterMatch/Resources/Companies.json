@@ -1,0 +1,2025 @@
+[
+  {
+    "id": "nimbus-cloud-systems",
+    "name": "Nimbus Cloud Systems",
+    "industry": "Technology",
+    "subIndustries": [
+      "Cloud Infrastructure",
+      "SaaS"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Seattle, WA",
+    "description": "Builds cloud infrastructure and managed Kubernetes platforms for large enterprises.",
+    "tags": [
+      "kubernetes",
+      "aws",
+      "golang",
+      "python",
+      "terraform",
+      "distributed systems",
+      "devops",
+      "sre",
+      "linux",
+      "microservices"
+    ],
+    "commonRoles": [
+      "site reliability engineer",
+      "backend engineer",
+      "platform engineer",
+      "cloud architect",
+      "devops engineer"
+    ],
+    "hiringKeywords": [
+      "scale",
+      "reliability",
+      "on-call",
+      "infrastructure",
+      "open source"
+    ]
+  },
+  {
+    "id": "vertex-analytics",
+    "name": "Vertex Analytics",
+    "industry": "Technology",
+    "subIndustries": [
+      "Data & Analytics",
+      "SaaS"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "Austin, TX",
+    "description": "Data analytics platform helping companies build dashboards and predictive models.",
+    "tags": [
+      "python",
+      "sql",
+      "machine learning",
+      "data engineering",
+      "airflow",
+      "spark",
+      "tableau",
+      "statistics",
+      "etl"
+    ],
+    "commonRoles": [
+      "data engineer",
+      "data scientist",
+      "analytics engineer",
+      "machine learning engineer"
+    ],
+    "hiringKeywords": [
+      "data driven",
+      "insights",
+      "predictive",
+      "dashboards"
+    ]
+  },
+  {
+    "id": "brightpath-health",
+    "name": "BrightPath Health",
+    "industry": "Healthcare",
+    "subIndustries": [
+      "Digital Health",
+      "Telemedicine"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "Boston, MA",
+    "description": "Telehealth company connecting patients with clinicians through a virtual care platform.",
+    "tags": [
+      "healthcare",
+      "hipaa",
+      "clinical",
+      "telehealth",
+      "react",
+      "nodejs",
+      "patient care",
+      "ehr",
+      "nursing"
+    ],
+    "commonRoles": [
+      "registered nurse",
+      "clinical operations manager",
+      "product manager",
+      "backend engineer",
+      "care coordinator"
+    ],
+    "hiringKeywords": [
+      "patient outcomes",
+      "compliance",
+      "virtual care",
+      "mission driven"
+    ]
+  },
+  {
+    "id": "cascade-biotech",
+    "name": "Cascade Biotech",
+    "industry": "Biotechnology",
+    "subIndustries": [
+      "Pharmaceuticals",
+      "Life Sciences"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Cambridge, MA",
+    "description": "Develops therapeutics for autoimmune diseases, from discovery through clinical trials.",
+    "tags": [
+      "molecular biology",
+      "biochemistry",
+      "clinical trials",
+      "regulatory affairs",
+      "immunology",
+      "lab research",
+      "gmp",
+      "r&d"
+    ],
+    "commonRoles": [
+      "research scientist",
+      "clinical research associate",
+      "regulatory affairs specialist",
+      "lab technician"
+    ],
+    "hiringKeywords": [
+      "fda",
+      "drug discovery",
+      "translational research"
+    ]
+  },
+  {
+    "id": "solace-financial",
+    "name": "Solace Financial",
+    "industry": "Financial Services",
+    "subIndustries": [
+      "FinTech",
+      "Payments"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "New York, NY",
+    "description": "Payments infrastructure and embedded finance APIs for marketplaces and platforms.",
+    "tags": [
+      "payments",
+      "fintech",
+      "java",
+      "kotlin",
+      "postgresql",
+      "compliance",
+      "risk management",
+      "api design",
+      "fraud detection"
+    ],
+    "commonRoles": [
+      "backend engineer",
+      "risk analyst",
+      "compliance officer",
+      "product manager",
+      "solutions engineer"
+    ],
+    "hiringKeywords": [
+      "fraud",
+      "regulation",
+      "transaction processing",
+      "scale"
+    ]
+  },
+  {
+    "id": "ledgerline-capital",
+    "name": "Ledgerline Capital",
+    "industry": "Financial Services",
+    "subIndustries": [
+      "Investment Banking",
+      "Wealth Management"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "New York, NY",
+    "description": "Wealth management and investment advisory firm serving institutional and private clients.",
+    "tags": [
+      "financial modeling",
+      "excel",
+      "portfolio management",
+      "cfa",
+      "equity research",
+      "client relations",
+      "bloomberg terminal"
+    ],
+    "commonRoles": [
+      "financial analyst",
+      "portfolio manager",
+      "wealth advisor",
+      "relationship manager"
+    ],
+    "hiringKeywords": [
+      "client trust",
+      "long-term returns",
+      "fiduciary"
+    ]
+  },
+  {
+    "id": "northwind-logistics",
+    "name": "Northwind Logistics",
+    "industry": "Logistics",
+    "subIndustries": [
+      "Supply Chain",
+      "Freight"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Chicago, IL",
+    "description": "Freight brokerage and supply-chain optimization software for shippers and carriers.",
+    "tags": [
+      "supply chain",
+      "logistics",
+      "route optimization",
+      "sql",
+      "operations",
+      "warehouse management",
+      "erp",
+      "procurement"
+    ],
+    "commonRoles": [
+      "logistics coordinator",
+      "supply chain analyst",
+      "operations manager",
+      "software engineer"
+    ],
+    "hiringKeywords": [
+      "efficiency",
+      "on-time delivery",
+      "fleet management"
+    ]
+  },
+  {
+    "id": "harborline-retail-group",
+    "name": "Harborline Retail Group",
+    "industry": "Retail",
+    "subIndustries": [
+      "E-commerce",
+      "Consumer Goods"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Minneapolis, MN",
+    "description": "Omnichannel retailer with e-commerce, in-store, and marketplace operations.",
+    "tags": [
+      "e-commerce",
+      "merchandising",
+      "shopify",
+      "inventory management",
+      "customer experience",
+      "retail operations",
+      "marketing"
+    ],
+    "commonRoles": [
+      "merchandiser",
+      "e-commerce manager",
+      "buyer",
+      "store operations manager",
+      "digital marketing specialist"
+    ],
+    "hiringKeywords": [
+      "customer experience",
+      "omnichannel",
+      "seasonal planning"
+    ]
+  },
+  {
+    "id": "fernwood-consulting-group",
+    "name": "Fernwood Consulting Group",
+    "industry": "Consulting",
+    "subIndustries": [
+      "Management Consulting",
+      "Strategy"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "Chicago, IL",
+    "description": "Strategy and operations consulting for Fortune 500 clients across industries.",
+    "tags": [
+      "strategy",
+      "business analysis",
+      "powerpoint",
+      "excel",
+      "project management",
+      "stakeholder management",
+      "process improvement"
+    ],
+    "commonRoles": [
+      "management consultant",
+      "business analyst",
+      "project manager",
+      "strategy associate"
+    ],
+    "hiringKeywords": [
+      "client facing",
+      "travel",
+      "problem solving"
+    ]
+  },
+  {
+    "id": "ironclad-cyber-defense",
+    "name": "Ironclad Cyber Defense",
+    "industry": "Cybersecurity",
+    "subIndustries": [
+      "Security Software",
+      "Threat Intelligence"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "Arlington, VA",
+    "description": "Builds threat detection and incident response tooling for enterprises and government.",
+    "tags": [
+      "cybersecurity",
+      "penetration testing",
+      "incident response",
+      "siem",
+      "python",
+      "network security",
+      "threat intelligence",
+      "cloud security"
+    ],
+    "commonRoles": [
+      "security engineer",
+      "penetration tester",
+      "soc analyst",
+      "security researcher"
+    ],
+    "hiringKeywords": [
+      "clearance eligible",
+      "zero trust",
+      "threat hunting"
+    ]
+  },
+  {
+    "id": "pixelforge-studios",
+    "name": "Pixelforge Studios",
+    "industry": "Gaming",
+    "subIndustries": [
+      "Video Games",
+      "Entertainment"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "Los Angeles, CA",
+    "description": "Independent game studio building narrative-driven console and PC titles.",
+    "tags": [
+      "unreal engine",
+      "unity",
+      "c++",
+      "game design",
+      "3d modeling",
+      "level design",
+      "gameplay programming",
+      "animation"
+    ],
+    "commonRoles": [
+      "gameplay programmer",
+      "game designer",
+      "technical artist",
+      "producer",
+      "qa tester"
+    ],
+    "hiringKeywords": [
+      "shipping games",
+      "player experience",
+      "crunch-free culture"
+    ]
+  },
+  {
+    "id": "aurora-streaming",
+    "name": "Aurora Streaming",
+    "industry": "Media & Entertainment",
+    "subIndustries": [
+      "Streaming",
+      "Content"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Los Angeles, CA",
+    "description": "Video streaming platform delivering original series and licensed content globally.",
+    "tags": [
+      "video streaming",
+      "content strategy",
+      "react",
+      "aws",
+      "data analytics",
+      "cdn",
+      "product management",
+      "recommendation systems"
+    ],
+    "commonRoles": [
+      "software engineer",
+      "content strategist",
+      "product manager",
+      "data scientist"
+    ],
+    "hiringKeywords": [
+      "global audience",
+      "original content",
+      "personalization"
+    ]
+  },
+  {
+    "id": "meridian-energy-partners",
+    "name": "Meridian Energy Partners",
+    "industry": "Energy",
+    "subIndustries": [
+      "Renewable Energy",
+      "Clean Tech"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Denver, CO",
+    "description": "Develops and operates solar and wind energy projects across North America.",
+    "tags": [
+      "renewable energy",
+      "solar",
+      "wind",
+      "project finance",
+      "electrical engineering",
+      "sustainability",
+      "power systems",
+      "permitting"
+    ],
+    "commonRoles": [
+      "project engineer",
+      "development manager",
+      "electrical engineer",
+      "sustainability analyst"
+    ],
+    "hiringKeywords": [
+      "clean energy transition",
+      "grid",
+      "environmental impact"
+    ]
+  },
+  {
+    "id": "redstone-manufacturing",
+    "name": "Redstone Manufacturing",
+    "industry": "Manufacturing",
+    "subIndustries": [
+      "Industrial Equipment",
+      "Automation"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Detroit, MI",
+    "description": "Manufactures industrial automation equipment and robotics for factory production lines.",
+    "tags": [
+      "mechanical engineering",
+      "robotics",
+      "automation",
+      "plc programming",
+      "lean manufacturing",
+      "six sigma",
+      "cad",
+      "quality assurance"
+    ],
+    "commonRoles": [
+      "mechanical engineer",
+      "automation engineer",
+      "manufacturing engineer",
+      "quality control manager"
+    ],
+    "hiringKeywords": [
+      "lean",
+      "safety",
+      "precision manufacturing"
+    ]
+  },
+  {
+    "id": "skyline-aerospace",
+    "name": "Skyline Aerospace",
+    "industry": "Aerospace",
+    "subIndustries": [
+      "Aviation",
+      "Defense"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Wichita, KS",
+    "description": "Designs and manufactures components for commercial and defense aircraft.",
+    "tags": [
+      "aerospace engineering",
+      "cad",
+      "systems engineering",
+      "avionics",
+      "materials science",
+      "quality assurance",
+      "manufacturing"
+    ],
+    "commonRoles": [
+      "aerospace engineer",
+      "systems engineer",
+      "avionics technician",
+      "quality engineer"
+    ],
+    "hiringKeywords": [
+      "faa certification",
+      "defense contracts",
+      "precision"
+    ]
+  },
+  {
+    "id": "vantage-motors",
+    "name": "Vantage Motors",
+    "industry": "Automotive",
+    "subIndustries": [
+      "Electric Vehicles",
+      "Manufacturing"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Austin, TX",
+    "description": "Electric vehicle manufacturer building passenger EVs and battery technology.",
+    "tags": [
+      "electric vehicles",
+      "battery technology",
+      "mechanical engineering",
+      "embedded systems",
+      "firmware",
+      "manufacturing",
+      "supply chain"
+    ],
+    "commonRoles": [
+      "mechanical engineer",
+      "firmware engineer",
+      "manufacturing engineer",
+      "supply chain manager"
+    ],
+    "hiringKeywords": [
+      "sustainability",
+      "innovation",
+      "fast paced"
+    ]
+  },
+  {
+    "id": "lumen-learning-co",
+    "name": "Lumen Learning Co.",
+    "industry": "Education",
+    "subIndustries": [
+      "EdTech",
+      "Online Learning"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "San Francisco, CA",
+    "description": "Online learning platform offering courses and certifications for working professionals.",
+    "tags": [
+      "edtech",
+      "curriculum design",
+      "react",
+      "nodejs",
+      "learning management systems",
+      "instructional design",
+      "product management"
+    ],
+    "commonRoles": [
+      "instructional designer",
+      "software engineer",
+      "product manager",
+      "curriculum developer"
+    ],
+    "hiringKeywords": [
+      "accessible education",
+      "lifelong learning",
+      "engagement"
+    ]
+  },
+  {
+    "id": "brightgate-real-estate-tech",
+    "name": "Brightgate Real Estate Tech",
+    "industry": "Real Estate",
+    "subIndustries": [
+      "PropTech",
+      "Real Estate"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "Miami, FL",
+    "description": "Software platform for property management and real estate transactions.",
+    "tags": [
+      "proptech",
+      "react",
+      "typescript",
+      "sql",
+      "real estate",
+      "property management",
+      "crm",
+      "product design"
+    ],
+    "commonRoles": [
+      "frontend engineer",
+      "product designer",
+      "customer success manager",
+      "sales representative"
+    ],
+    "hiringKeywords": [
+      "landlords",
+      "tenants",
+      "streamlined transactions"
+    ]
+  },
+  {
+    "id": "coastal-hospitality-group",
+    "name": "Coastal Hospitality Group",
+    "industry": "Hospitality",
+    "subIndustries": [
+      "Hotels",
+      "Travel"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Orlando, FL",
+    "description": "Operates a portfolio of hotels and resorts with a focus on guest experience.",
+    "tags": [
+      "hospitality management",
+      "guest services",
+      "revenue management",
+      "operations",
+      "customer service",
+      "event planning"
+    ],
+    "commonRoles": [
+      "hotel general manager",
+      "revenue manager",
+      "guest services manager",
+      "operations coordinator"
+    ],
+    "hiringKeywords": [
+      "guest satisfaction",
+      "hospitality excellence",
+      "travel industry"
+    ]
+  },
+  {
+    "id": "junction-legal-tech",
+    "name": "Junction Legal Tech",
+    "industry": "Legal",
+    "subIndustries": [
+      "LegalTech",
+      "SaaS"
+    ],
+    "size": "Small",
+    "hqLocation": "Washington, DC",
+    "description": "Contract lifecycle management and legal research software for law firms and corporate legal teams.",
+    "tags": [
+      "legal tech",
+      "contract management",
+      "python",
+      "nlp",
+      "compliance",
+      "legal research",
+      "product management"
+    ],
+    "commonRoles": [
+      "software engineer",
+      "legal product manager",
+      "solutions consultant",
+      "compliance analyst"
+    ],
+    "hiringKeywords": [
+      "contracts",
+      "risk reduction",
+      "efficiency for legal teams"
+    ]
+  },
+  {
+    "id": "talentbridge-hr-solutions",
+    "name": "Talentbridge HR Solutions",
+    "industry": "Human Resources",
+    "subIndustries": [
+      "HR Tech",
+      "SaaS"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "Atlanta, GA",
+    "description": "HR and payroll software for small and mid-sized businesses.",
+    "tags": [
+      "hr tech",
+      "payroll",
+      "recruiting",
+      "react",
+      "ruby on rails",
+      "customer success",
+      "b2b saas"
+    ],
+    "commonRoles": [
+      "software engineer",
+      "customer success manager",
+      "implementation specialist",
+      "product manager"
+    ],
+    "hiringKeywords": [
+      "employee experience",
+      "compliance",
+      "small business"
+    ]
+  },
+  {
+    "id": "marquee-growth-marketing",
+    "name": "Marquee Growth Marketing",
+    "industry": "Marketing",
+    "subIndustries": [
+      "AdTech",
+      "Digital Marketing"
+    ],
+    "size": "Small",
+    "hqLocation": "New York, NY",
+    "description": "Performance marketing and adtech platform for direct-to-consumer brands.",
+    "tags": [
+      "digital marketing",
+      "seo",
+      "sem",
+      "growth marketing",
+      "analytics",
+      "javascript",
+      "a/b testing",
+      "paid media"
+    ],
+    "commonRoles": [
+      "growth marketer",
+      "performance marketing manager",
+      "data analyst",
+      "frontend engineer"
+    ],
+    "hiringKeywords": [
+      "performance",
+      "conversion optimization",
+      "brand growth"
+    ]
+  },
+  {
+    "id": "civic-works-government-solutions",
+    "name": "Civic Works Government Solutions",
+    "industry": "Government",
+    "subIndustries": [
+      "Public Sector",
+      "GovTech"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Washington, DC",
+    "description": "Builds modernized digital services and case management systems for government agencies.",
+    "tags": [
+      "govtech",
+      "public sector",
+      "java",
+      "security clearance",
+      "accessibility",
+      "civic technology",
+      "project management"
+    ],
+    "commonRoles": [
+      "software engineer",
+      "product manager",
+      "business analyst",
+      "systems administrator"
+    ],
+    "hiringKeywords": [
+      "public service",
+      "accessibility",
+      "security clearance eligible"
+    ]
+  },
+  {
+    "id": "openhand-global-nonprofit",
+    "name": "Openhand Global Nonprofit",
+    "industry": "Nonprofit",
+    "subIndustries": [
+      "Social Impact",
+      "International Development"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "Portland, OR",
+    "description": "International nonprofit focused on clean water access and community health programs.",
+    "tags": [
+      "nonprofit",
+      "program management",
+      "grant writing",
+      "community outreach",
+      "monitoring and evaluation",
+      "public health"
+    ],
+    "commonRoles": [
+      "program manager",
+      "grant writer",
+      "field coordinator",
+      "monitoring and evaluation specialist"
+    ],
+    "hiringKeywords": [
+      "mission driven",
+      "community impact",
+      "global development"
+    ]
+  },
+  {
+    "id": "quarrystone-insurance",
+    "name": "Quarrystone Insurance",
+    "industry": "Insurance",
+    "subIndustries": [
+      "InsurTech",
+      "Property & Casualty"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Hartford, CT",
+    "description": "Property and casualty insurer modernizing underwriting with data-driven risk models.",
+    "tags": [
+      "underwriting",
+      "actuarial science",
+      "insurtech",
+      "risk assessment",
+      "sql",
+      "claims processing",
+      "python"
+    ],
+    "commonRoles": [
+      "underwriter",
+      "actuary",
+      "claims adjuster",
+      "data scientist"
+    ],
+    "hiringKeywords": [
+      "risk modeling",
+      "customer trust",
+      "regulatory compliance"
+    ]
+  },
+  {
+    "id": "fieldstone-agritech",
+    "name": "Fieldstone Agritech",
+    "industry": "Agriculture",
+    "subIndustries": [
+      "AgTech",
+      "Farming Technology"
+    ],
+    "size": "Small",
+    "hqLocation": "Des Moines, IA",
+    "description": "Precision agriculture platform using sensors and data to optimize crop yields.",
+    "tags": [
+      "agtech",
+      "iot",
+      "data analysis",
+      "embedded systems",
+      "python",
+      "gis",
+      "sustainability",
+      "sensors"
+    ],
+    "commonRoles": [
+      "iot engineer",
+      "data scientist",
+      "agronomist",
+      "field engineer"
+    ],
+    "hiringKeywords": [
+      "sustainable farming",
+      "yield optimization",
+      "rural communities"
+    ]
+  },
+  {
+    "id": "beacon-telecom",
+    "name": "Beacon Telecom",
+    "industry": "Telecommunications",
+    "subIndustries": [
+      "Networking",
+      "5G Infrastructure"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Dallas, TX",
+    "description": "Telecommunications carrier building 5G network infrastructure and enterprise connectivity.",
+    "tags": [
+      "networking",
+      "5g",
+      "telecommunications",
+      "network engineering",
+      "rf engineering",
+      "cisco",
+      "cloud",
+      "project management"
+    ],
+    "commonRoles": [
+      "network engineer",
+      "rf engineer",
+      "project manager",
+      "field technician"
+    ],
+    "hiringKeywords": [
+      "connectivity",
+      "network reliability",
+      "infrastructure buildout"
+    ]
+  },
+  {
+    "id": "anchorpoint-cloud-security",
+    "name": "Anchorpoint Cloud Security",
+    "industry": "Cybersecurity",
+    "subIndustries": [
+      "Cloud Security",
+      "SaaS"
+    ],
+    "size": "Small",
+    "hqLocation": "San Jose, CA",
+    "description": "Cloud security posture management platform for multi-cloud enterprises.",
+    "tags": [
+      "cloud security",
+      "aws",
+      "azure",
+      "gcp",
+      "python",
+      "go",
+      "compliance",
+      "devsecops",
+      "identity and access management"
+    ],
+    "commonRoles": [
+      "security engineer",
+      "devsecops engineer",
+      "solutions architect",
+      "product manager"
+    ],
+    "hiringKeywords": [
+      "shift left security",
+      "compliance automation",
+      "multi-cloud"
+    ]
+  },
+  {
+    "id": "lighthouse-consumer-brands",
+    "name": "Lighthouse Consumer Brands",
+    "industry": "Consumer Goods",
+    "subIndustries": [
+      "CPG",
+      "Retail"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Cincinnati, OH",
+    "description": "Consumer packaged goods company producing household and personal care products.",
+    "tags": [
+      "brand management",
+      "supply chain",
+      "marketing",
+      "consumer insights",
+      "trade marketing",
+      "category management"
+    ],
+    "commonRoles": [
+      "brand manager",
+      "supply chain analyst",
+      "trade marketing manager",
+      "consumer insights analyst"
+    ],
+    "hiringKeywords": [
+      "household brands",
+      "market share",
+      "innovation pipeline"
+    ]
+  },
+  {
+    "id": "trailmark-outdoor-co",
+    "name": "Trailmark Outdoor Co.",
+    "industry": "Retail",
+    "subIndustries": [
+      "Outdoor Recreation",
+      "E-commerce"
+    ],
+    "size": "Small",
+    "hqLocation": "Boulder, CO",
+    "description": "Direct-to-consumer outdoor gear and apparel brand.",
+    "tags": [
+      "e-commerce",
+      "shopify",
+      "brand marketing",
+      "customer experience",
+      "supply chain",
+      "social media marketing"
+    ],
+    "commonRoles": [
+      "e-commerce manager",
+      "social media manager",
+      "supply chain coordinator",
+      "customer experience lead"
+    ],
+    "hiringKeywords": [
+      "outdoor lifestyle",
+      "sustainability",
+      "community"
+    ]
+  },
+  {
+    "id": "pinnacle-wealth-tech",
+    "name": "Pinnacle Wealth Tech",
+    "industry": "Financial Services",
+    "subIndustries": [
+      "WealthTech",
+      "SaaS"
+    ],
+    "size": "Small",
+    "hqLocation": "Charlotte, NC",
+    "description": "Robo-advisory and financial planning software for independent financial advisors.",
+    "tags": [
+      "fintech",
+      "python",
+      "react",
+      "financial planning",
+      "portfolio management",
+      "api integration",
+      "compliance"
+    ],
+    "commonRoles": [
+      "software engineer",
+      "product manager",
+      "compliance analyst",
+      "customer success manager"
+    ],
+    "hiringKeywords": [
+      "financial wellness",
+      "advisor tools",
+      "regulation"
+    ]
+  },
+  {
+    "id": "cinderhouse-media-network",
+    "name": "Cinderhouse Media Network",
+    "industry": "Media & Entertainment",
+    "subIndustries": [
+      "Broadcasting",
+      "Digital Media"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "Atlanta, GA",
+    "description": "Digital media network producing news and entertainment content across platforms.",
+    "tags": [
+      "journalism",
+      "content production",
+      "video editing",
+      "social media",
+      "digital marketing",
+      "audience analytics"
+    ],
+    "commonRoles": [
+      "journalist",
+      "content producer",
+      "video editor",
+      "social media manager"
+    ],
+    "hiringKeywords": [
+      "storytelling",
+      "audience growth",
+      "editorial integrity"
+    ]
+  },
+  {
+    "id": "stonegate-manufacturing-robotics",
+    "name": "Stonegate Manufacturing Robotics",
+    "industry": "Manufacturing",
+    "subIndustries": [
+      "Robotics",
+      "Automation"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "Pittsburgh, PA",
+    "description": "Builds collaborative robots (cobots) for small and mid-sized manufacturers.",
+    "tags": [
+      "robotics",
+      "mechanical engineering",
+      "embedded systems",
+      "c++",
+      "computer vision",
+      "automation",
+      "controls engineering"
+    ],
+    "commonRoles": [
+      "robotics engineer",
+      "controls engineer",
+      "embedded software engineer",
+      "field applications engineer"
+    ],
+    "hiringKeywords": [
+      "cobots",
+      "small manufacturer accessibility",
+      "safety"
+    ]
+  },
+  {
+    "id": "driftwood-travel-tech",
+    "name": "Driftwood Travel Tech",
+    "industry": "Travel",
+    "subIndustries": [
+      "Travel Tech",
+      "Booking Platforms"
+    ],
+    "size": "Small",
+    "hqLocation": "San Diego, CA",
+    "description": "Travel booking platform for independent hotels and boutique travel experiences.",
+    "tags": [
+      "travel tech",
+      "react",
+      "nodejs",
+      "booking systems",
+      "customer support",
+      "product management",
+      "payments"
+    ],
+    "commonRoles": [
+      "software engineer",
+      "customer support specialist",
+      "product manager",
+      "partnerships manager"
+    ],
+    "hiringKeywords": [
+      "boutique travel",
+      "independent hotels",
+      "customer delight"
+    ]
+  },
+  {
+    "id": "amberlight-data-privacy",
+    "name": "Amberlight Data Privacy",
+    "industry": "Technology",
+    "subIndustries": [
+      "Privacy Tech",
+      "Compliance Software"
+    ],
+    "size": "Small",
+    "hqLocation": "San Francisco, CA",
+    "description": "Data privacy and compliance automation software for GDPR/CCPA compliance.",
+    "tags": [
+      "data privacy",
+      "compliance",
+      "gdpr",
+      "ccpa",
+      "python",
+      "legal tech",
+      "risk management",
+      "security"
+    ],
+    "commonRoles": [
+      "privacy engineer",
+      "compliance analyst",
+      "software engineer",
+      "solutions consultant"
+    ],
+    "hiringKeywords": [
+      "privacy by design",
+      "regulatory change",
+      "trust"
+    ]
+  },
+  {
+    "id": "greenfield-construction-group",
+    "name": "Greenfield Construction Group",
+    "industry": "Construction",
+    "subIndustries": [
+      "Commercial Construction",
+      "Real Estate Development"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Houston, TX",
+    "description": "General contractor specializing in commercial and industrial construction projects.",
+    "tags": [
+      "construction management",
+      "project management",
+      "estimating",
+      "autocad",
+      "safety compliance",
+      "scheduling",
+      "procurement"
+    ],
+    "commonRoles": [
+      "project manager",
+      "construction estimator",
+      "site superintendent",
+      "safety manager"
+    ],
+    "hiringKeywords": [
+      "on time and on budget",
+      "safety first",
+      "large scale builds"
+    ]
+  },
+  {
+    "id": "cobaltworks-robotics-research",
+    "name": "Cobaltworks Robotics Research",
+    "industry": "Robotics",
+    "subIndustries": [
+      "Research & Development",
+      "AI"
+    ],
+    "size": "Small",
+    "hqLocation": "Pittsburgh, PA",
+    "description": "R&D lab developing autonomous navigation systems for warehouse robots.",
+    "tags": [
+      "robotics",
+      "computer vision",
+      "machine learning",
+      "c++",
+      "python",
+      "ros",
+      "autonomous systems",
+      "slam"
+    ],
+    "commonRoles": [
+      "robotics engineer",
+      "computer vision engineer",
+      "research scientist",
+      "software engineer"
+    ],
+    "hiringKeywords": [
+      "autonomy",
+      "warehouse automation",
+      "cutting edge research"
+    ]
+  },
+  {
+    "id": "homestead-insurance-mutual",
+    "name": "Homestead Insurance Mutual",
+    "industry": "Insurance",
+    "subIndustries": [
+      "Life Insurance",
+      "Annuities"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Des Moines, IA",
+    "description": "Mutual insurer offering life insurance and retirement products.",
+    "tags": [
+      "actuarial science",
+      "underwriting",
+      "customer service",
+      "financial analysis",
+      "compliance",
+      "excel"
+    ],
+    "commonRoles": [
+      "actuary",
+      "underwriter",
+      "financial analyst",
+      "customer service representative"
+    ],
+    "hiringKeywords": [
+      "long-term security",
+      "policyholder trust",
+      "stability"
+    ]
+  },
+  {
+    "id": "fernbrook-museums-and-culture-trust",
+    "name": "Fernbrook Museums & Culture Trust",
+    "industry": "Nonprofit",
+    "subIndustries": [
+      "Arts & Culture",
+      "Museums"
+    ],
+    "size": "Small",
+    "hqLocation": "Philadelphia, PA",
+    "description": "Nonprofit trust operating museums and cultural heritage programs.",
+    "tags": [
+      "nonprofit management",
+      "fundraising",
+      "event planning",
+      "community engagement",
+      "grant writing",
+      "marketing"
+    ],
+    "commonRoles": [
+      "development director",
+      "program coordinator",
+      "marketing manager",
+      "curator"
+    ],
+    "hiringKeywords": [
+      "cultural preservation",
+      "community access",
+      "philanthropy"
+    ]
+  },
+  {
+    "id": "switchyard-rail-logistics",
+    "name": "Switchyard Rail Logistics",
+    "industry": "Logistics",
+    "subIndustries": [
+      "Rail Transport",
+      "Freight"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Omaha, NE",
+    "description": "Rail freight operator moving industrial and consumer goods across North America.",
+    "tags": [
+      "logistics",
+      "operations management",
+      "safety compliance",
+      "scheduling",
+      "supply chain",
+      "fleet management"
+    ],
+    "commonRoles": [
+      "operations manager",
+      "logistics coordinator",
+      "safety officer",
+      "dispatcher"
+    ],
+    "hiringKeywords": [
+      "safety",
+      "on-time performance",
+      "heavy freight"
+    ]
+  },
+  {
+    "id": "parallax-vr-labs",
+    "name": "Parallax VR Labs",
+    "industry": "Technology",
+    "subIndustries": [
+      "Virtual Reality",
+      "Gaming"
+    ],
+    "size": "Small",
+    "hqLocation": "Seattle, WA",
+    "description": "Builds VR training simulations for industrial and healthcare clients.",
+    "tags": [
+      "unity",
+      "c#",
+      "3d modeling",
+      "virtual reality",
+      "simulation design",
+      "ux design",
+      "unreal engine"
+    ],
+    "commonRoles": [
+      "vr developer",
+      "3d artist",
+      "ux designer",
+      "simulation engineer"
+    ],
+    "hiringKeywords": [
+      "immersive training",
+      "safety simulation",
+      "innovation"
+    ]
+  },
+  {
+    "id": "redbrick-community-banking",
+    "name": "Redbrick Community Banking",
+    "industry": "Financial Services",
+    "subIndustries": [
+      "Community Banking",
+      "Retail Banking"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "Nashville, TN",
+    "description": "Community bank offering personal and small business banking services.",
+    "tags": [
+      "banking",
+      "customer service",
+      "loan origination",
+      "financial analysis",
+      "compliance",
+      "relationship management"
+    ],
+    "commonRoles": [
+      "loan officer",
+      "branch manager",
+      "financial analyst",
+      "customer service representative"
+    ],
+    "hiringKeywords": [
+      "community focused",
+      "small business lending",
+      "personal banking"
+    ]
+  },
+  {
+    "id": "overlook-wildlife-conservation-trust",
+    "name": "Overlook Wildlife Conservation Trust",
+    "industry": "Nonprofit",
+    "subIndustries": [
+      "Environmental Conservation",
+      "Wildlife"
+    ],
+    "size": "Small",
+    "hqLocation": "Bozeman, MT",
+    "description": "Conservation nonprofit protecting wildlife habitats through research and advocacy.",
+    "tags": [
+      "conservation",
+      "ecology",
+      "gis",
+      "grant writing",
+      "field research",
+      "environmental policy",
+      "community outreach"
+    ],
+    "commonRoles": [
+      "conservation biologist",
+      "field researcher",
+      "grant writer",
+      "outreach coordinator"
+    ],
+    "hiringKeywords": [
+      "habitat protection",
+      "biodiversity",
+      "advocacy"
+    ]
+  },
+  {
+    "id": "truenorth-data-centers",
+    "name": "Truenorth Data Centers",
+    "industry": "Technology",
+    "subIndustries": [
+      "Data Center Operations",
+      "Infrastructure"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Ashburn, VA",
+    "description": "Operates colocation data centers and infrastructure services for enterprise clients.",
+    "tags": [
+      "data center operations",
+      "networking",
+      "linux",
+      "electrical systems",
+      "hvac",
+      "infrastructure management",
+      "security"
+    ],
+    "commonRoles": [
+      "data center technician",
+      "network engineer",
+      "facilities engineer",
+      "operations manager"
+    ],
+    "hiringKeywords": [
+      "uptime",
+      "physical security",
+      "critical infrastructure"
+    ]
+  },
+  {
+    "id": "sable-and-finch-creative-agency",
+    "name": "Sable & Finch Creative Agency",
+    "industry": "Marketing",
+    "subIndustries": [
+      "Advertising",
+      "Creative Services"
+    ],
+    "size": "Small",
+    "hqLocation": "Portland, OR",
+    "description": "Full-service creative agency for brand strategy, design, and advertising campaigns.",
+    "tags": [
+      "graphic design",
+      "brand strategy",
+      "adobe creative suite",
+      "copywriting",
+      "art direction",
+      "social media marketing"
+    ],
+    "commonRoles": [
+      "art director",
+      "copywriter",
+      "graphic designer",
+      "brand strategist"
+    ],
+    "hiringKeywords": [
+      "creative excellence",
+      "brand storytelling",
+      "client partnerships"
+    ]
+  },
+  {
+    "id": "ridgeline-defense-systems",
+    "name": "Ridgeline Defense Systems",
+    "industry": "Defense",
+    "subIndustries": [
+      "Defense Technology",
+      "Aerospace"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Huntsville, AL",
+    "description": "Defense contractor developing radar and communications systems for military applications.",
+    "tags": [
+      "systems engineering",
+      "rf engineering",
+      "signal processing",
+      "matlab",
+      "security clearance",
+      "embedded systems",
+      "defense"
+    ],
+    "commonRoles": [
+      "systems engineer",
+      "rf engineer",
+      "software engineer",
+      "test engineer"
+    ],
+    "hiringKeywords": [
+      "security clearance required",
+      "mission critical",
+      "defense contracts"
+    ]
+  },
+  {
+    "id": "cottonwood-family-retail",
+    "name": "Cottonwood Family Retail",
+    "industry": "Retail",
+    "subIndustries": [
+      "Grocery",
+      "Consumer Goods"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Salt Lake City, UT",
+    "description": "Regional grocery chain with a focus on local sourcing and community stores.",
+    "tags": [
+      "retail operations",
+      "merchandising",
+      "supply chain",
+      "customer service",
+      "inventory management",
+      "store management"
+    ],
+    "commonRoles": [
+      "store manager",
+      "merchandiser",
+      "supply chain analyst",
+      "district manager"
+    ],
+    "hiringKeywords": [
+      "local sourcing",
+      "community grocery",
+      "customer service"
+    ]
+  },
+  {
+    "id": "fluxgate-semiconductor",
+    "name": "Fluxgate Semiconductor",
+    "industry": "Technology",
+    "subIndustries": [
+      "Semiconductors",
+      "Hardware"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "San Jose, CA",
+    "description": "Designs and manufactures semiconductor chips for consumer electronics and automotive.",
+    "tags": [
+      "semiconductor design",
+      "verilog",
+      "vlsi",
+      "embedded systems",
+      "electrical engineering",
+      "hardware testing",
+      "firmware"
+    ],
+    "commonRoles": [
+      "hardware engineer",
+      "verification engineer",
+      "firmware engineer",
+      "test engineer"
+    ],
+    "hiringKeywords": [
+      "chip design",
+      "low power",
+      "high volume manufacturing"
+    ]
+  },
+  {
+    "id": "wrenhaven-property-management",
+    "name": "Wrenhaven Property Management",
+    "industry": "Real Estate",
+    "subIndustries": [
+      "Property Management",
+      "Residential"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "Phoenix, AZ",
+    "description": "Manages residential apartment communities across the southwest United States.",
+    "tags": [
+      "property management",
+      "leasing",
+      "customer service",
+      "maintenance coordination",
+      "budgeting",
+      "real estate"
+    ],
+    "commonRoles": [
+      "property manager",
+      "leasing consultant",
+      "maintenance supervisor",
+      "regional manager"
+    ],
+    "hiringKeywords": [
+      "resident satisfaction",
+      "occupancy",
+      "community living"
+    ]
+  },
+  {
+    "id": "ampersand-design-studio",
+    "name": "Ampersand Design Studio",
+    "industry": "Design",
+    "subIndustries": [
+      "Product Design",
+      "UX Consulting"
+    ],
+    "size": "Small",
+    "hqLocation": "San Francisco, CA",
+    "description": "Product design consultancy partnering with startups on UX and design systems.",
+    "tags": [
+      "ux design",
+      "ui design",
+      "figma",
+      "design systems",
+      "user research",
+      "prototyping",
+      "product strategy"
+    ],
+    "commonRoles": [
+      "product designer",
+      "ux researcher",
+      "design systems lead",
+      "design director"
+    ],
+    "hiringKeywords": [
+      "human centered design",
+      "startup partnerships",
+      "craft"
+    ]
+  },
+  {
+    "id": "coalfield-mining-and-minerals",
+    "name": "Coalfield Mining & Minerals",
+    "industry": "Mining",
+    "subIndustries": [
+      "Natural Resources",
+      "Industrial"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Charleston, WV",
+    "description": "Mining company extracting and processing industrial minerals with a modernization focus.",
+    "tags": [
+      "mining engineering",
+      "geology",
+      "heavy equipment operations",
+      "safety compliance",
+      "environmental compliance",
+      "operations management"
+    ],
+    "commonRoles": [
+      "mining engineer",
+      "geologist",
+      "safety manager",
+      "operations supervisor"
+    ],
+    "hiringKeywords": [
+      "safety first",
+      "environmental stewardship",
+      "resource extraction"
+    ]
+  },
+  {
+    "id": "palmerston-hotels-collection",
+    "name": "Palmerston Hotels Collection",
+    "industry": "Hospitality",
+    "subIndustries": [
+      "Luxury Hotels",
+      "Travel"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "New Orleans, LA",
+    "description": "Boutique luxury hotel collection with locations across the southern United States.",
+    "tags": [
+      "hospitality management",
+      "guest experience",
+      "revenue management",
+      "event planning",
+      "food and beverage management"
+    ],
+    "commonRoles": [
+      "hotel manager",
+      "director of sales",
+      "food and beverage manager",
+      "concierge"
+    ],
+    "hiringKeywords": [
+      "luxury service",
+      "boutique hospitality",
+      "guest loyalty"
+    ]
+  },
+  {
+    "id": "ferngully-environmental-consulting",
+    "name": "Ferngully Environmental Consulting",
+    "industry": "Environmental Services",
+    "subIndustries": [
+      "Environmental Consulting",
+      "Sustainability"
+    ],
+    "size": "Small",
+    "hqLocation": "Denver, CO",
+    "description": "Environmental consulting firm supporting sustainability audits and regulatory compliance.",
+    "tags": [
+      "environmental science",
+      "sustainability",
+      "regulatory compliance",
+      "gis",
+      "environmental impact assessment",
+      "project management"
+    ],
+    "commonRoles": [
+      "environmental consultant",
+      "sustainability analyst",
+      "project manager",
+      "compliance specialist"
+    ],
+    "hiringKeywords": [
+      "sustainability",
+      "regulatory expertise",
+      "client advisory"
+    ]
+  },
+  {
+    "id": "northgate-public-schools-technology-office",
+    "name": "Northgate Public Schools Technology Office",
+    "industry": "Education",
+    "subIndustries": [
+      "K-12 Education",
+      "GovTech"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "Columbus, OH",
+    "description": "District technology office building digital learning tools and IT infrastructure for public schools.",
+    "tags": [
+      "it support",
+      "network administration",
+      "edtech",
+      "help desk",
+      "systems administration",
+      "project management"
+    ],
+    "commonRoles": [
+      "it support specialist",
+      "network administrator",
+      "instructional technology coordinator",
+      "systems administrator"
+    ],
+    "hiringKeywords": [
+      "public education",
+      "student access",
+      "reliable systems"
+    ]
+  },
+  {
+    "id": "glasswing-pharmaceuticals",
+    "name": "Glasswing Pharmaceuticals",
+    "industry": "Biotechnology",
+    "subIndustries": [
+      "Pharmaceuticals",
+      "Manufacturing"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Raleigh, NC",
+    "description": "Pharmaceutical manufacturer producing generic and specialty medications at scale.",
+    "tags": [
+      "pharmaceutical manufacturing",
+      "gmp",
+      "quality assurance",
+      "regulatory affairs",
+      "chemical engineering",
+      "supply chain"
+    ],
+    "commonRoles": [
+      "quality assurance manager",
+      "process engineer",
+      "regulatory affairs specialist",
+      "supply chain planner"
+    ],
+    "hiringKeywords": [
+      "fda compliance",
+      "patient access",
+      "manufacturing excellence"
+    ]
+  },
+  {
+    "id": "copperline-utilities",
+    "name": "Copperline Utilities",
+    "industry": "Energy",
+    "subIndustries": [
+      "Utilities",
+      "Power Grid"
+    ],
+    "size": "Enterprise",
+    "hqLocation": "Phoenix, AZ",
+    "description": "Regional electric utility managing power generation, transmission, and distribution.",
+    "tags": [
+      "electrical engineering",
+      "power systems",
+      "grid operations",
+      "project management",
+      "safety compliance",
+      "scada"
+    ],
+    "commonRoles": [
+      "electrical engineer",
+      "grid operations analyst",
+      "project manager",
+      "field technician"
+    ],
+    "hiringKeywords": [
+      "grid reliability",
+      "public utility",
+      "safety"
+    ]
+  },
+  {
+    "id": "fable-and-ford-publishing-house",
+    "name": "Fable & Ford Publishing House",
+    "industry": "Media & Entertainment",
+    "subIndustries": [
+      "Publishing",
+      "Content"
+    ],
+    "size": "Small",
+    "hqLocation": "Brooklyn, NY",
+    "description": "Independent publishing house producing fiction, nonfiction, and digital content.",
+    "tags": [
+      "editing",
+      "content strategy",
+      "publishing",
+      "marketing",
+      "author relations",
+      "digital media"
+    ],
+    "commonRoles": [
+      "editor",
+      "marketing manager",
+      "acquisitions editor",
+      "publicist"
+    ],
+    "hiringKeywords": [
+      "storytelling",
+      "author partnerships",
+      "independent press"
+    ]
+  },
+  {
+    "id": "silvermark-cybersecurity-consulting",
+    "name": "Silvermark Cybersecurity Consulting",
+    "industry": "Cybersecurity",
+    "subIndustries": [
+      "Security Consulting",
+      "Risk Management"
+    ],
+    "size": "Small",
+    "hqLocation": "Reston, VA",
+    "description": "Security consultancy performing penetration testing and risk assessments for enterprises.",
+    "tags": [
+      "penetration testing",
+      "risk assessment",
+      "cybersecurity",
+      "compliance",
+      "network security",
+      "cloud security",
+      "reporting"
+    ],
+    "commonRoles": [
+      "penetration tester",
+      "security consultant",
+      "risk analyst",
+      "compliance auditor"
+    ],
+    "hiringKeywords": [
+      "client engagements",
+      "security clearance a plus",
+      "trusted advisor"
+    ]
+  },
+  {
+    "id": "duskwood-outdoor-media",
+    "name": "Duskwood Outdoor Media",
+    "industry": "Marketing",
+    "subIndustries": [
+      "Out-of-Home Advertising",
+      "AdTech"
+    ],
+    "size": "Small",
+    "hqLocation": "Denver, CO",
+    "description": "Digital out-of-home advertising network operating billboards and transit displays.",
+    "tags": [
+      "advertising sales",
+      "media planning",
+      "digital signage",
+      "data analytics",
+      "account management"
+    ],
+    "commonRoles": [
+      "account executive",
+      "media planner",
+      "operations coordinator",
+      "data analyst"
+    ],
+    "hiringKeywords": [
+      "local advertisers",
+      "digital signage",
+      "audience measurement"
+    ]
+  },
+  {
+    "id": "ashgrove-veterinary-network",
+    "name": "Ashgrove Veterinary Network",
+    "industry": "Healthcare",
+    "subIndustries": [
+      "Veterinary",
+      "Animal Health"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "Kansas City, MO",
+    "description": "Network of veterinary clinics providing animal health services and pet wellness plans.",
+    "tags": [
+      "veterinary medicine",
+      "animal health",
+      "clinical operations",
+      "customer service",
+      "practice management"
+    ],
+    "commonRoles": [
+      "veterinarian",
+      "veterinary technician",
+      "practice manager",
+      "customer service representative"
+    ],
+    "hiringKeywords": [
+      "animal welfare",
+      "client trust",
+      "clinical excellence"
+    ]
+  },
+  {
+    "id": "hollowbrook-craft-brewing-co",
+    "name": "Hollowbrook Craft Brewing Co.",
+    "industry": "Food & Beverage",
+    "subIndustries": [
+      "Craft Brewing",
+      "Consumer Goods"
+    ],
+    "size": "Small",
+    "hqLocation": "Asheville, NC",
+    "description": "Craft brewery producing and distributing regional beers with a taproom experience.",
+    "tags": [
+      "brewing operations",
+      "quality control",
+      "distribution",
+      "sales",
+      "marketing",
+      "hospitality"
+    ],
+    "commonRoles": [
+      "brewmaster",
+      "sales representative",
+      "taproom manager",
+      "quality control technician"
+    ],
+    "hiringKeywords": [
+      "craft quality",
+      "local community",
+      "distribution growth"
+    ]
+  },
+  {
+    "id": "ninth-wave-marine-engineering",
+    "name": "Ninth Wave Marine Engineering",
+    "industry": "Engineering",
+    "subIndustries": [
+      "Marine Engineering",
+      "Manufacturing"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "Norfolk, VA",
+    "description": "Marine engineering firm designing propulsion and hull systems for commercial vessels.",
+    "tags": [
+      "marine engineering",
+      "naval architecture",
+      "mechanical engineering",
+      "cad",
+      "project management",
+      "manufacturing"
+    ],
+    "commonRoles": [
+      "marine engineer",
+      "naval architect",
+      "project engineer",
+      "manufacturing engineer"
+    ],
+    "hiringKeywords": [
+      "maritime industry",
+      "precision engineering",
+      "commercial fleets"
+    ]
+  },
+  {
+    "id": "rosemont-senior-living-communities",
+    "name": "Rosemont Senior Living Communities",
+    "industry": "Healthcare",
+    "subIndustries": [
+      "Senior Care",
+      "Assisted Living"
+    ],
+    "size": "Mid-size",
+    "hqLocation": "Tampa, FL",
+    "description": "Operates assisted living and memory care communities focused on resident quality of life.",
+    "tags": [
+      "healthcare administration",
+      "assisted living",
+      "nursing",
+      "resident care",
+      "compliance",
+      "operations management"
+    ],
+    "commonRoles": [
+      "executive director",
+      "registered nurse",
+      "resident care coordinator",
+      "operations manager"
+    ],
+    "hiringKeywords": [
+      "quality of life",
+      "compassionate care",
+      "regulatory compliance"
+    ]
+  }
+]
