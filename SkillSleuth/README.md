@@ -1,4 +1,4 @@
-# RecruiterMatch
+# SkillSleuth
 
 An iPhone app for recruiters: create a candidate profile, upload their CV, and get the
 top 10 companies to target for that person — matched on skills, title, and CV content.
@@ -13,12 +13,12 @@ with Xcode 15+ to build, fix any small issues that come up on first compile, and
 ## What's here
 
 ```
-RecruiterMatch/
-  project.yml                  XcodeGen project definition (source of truth — .xcodeproj is generated, not committed)
-  RecruiterMatch/
-    RecruiterMatchApp.swift     App entry point
+SkillSleuth/
+  project.yml               XcodeGen project definition (source of truth — .xcodeproj is generated, not committed)
+  SkillSleuth/
+    SkillSleuthApp.swift     App entry point
     Info.plist
-    RecruiterMatch.entitlements CloudKit capability
+    SkillSleuth.entitlements CloudKit capability
     Models/
       Candidate.swift           Candidate profile + CloudKit CKRecord mapping
       Company.swift              Company reference data model
@@ -79,13 +79,13 @@ description, tags, commonRoles, hiringKeywords`. The matching code needs no chan
 2. From this directory, run:
    ```
    xcodegen generate
-   open RecruiterMatch.xcodeproj
+   open SkillSleuth.xcodeproj
    ```
-3. In Xcode, select the `RecruiterMatch` target → **Signing & Capabilities**:
+3. In Xcode, select the `SkillSleuth` target → **Signing & Capabilities**:
    - Set your Apple Developer **Team**.
-   - Change the bundle identifier from `com.recruitermatch.app` to something under your
-     own team (also update it in `project.yml` and in `RecruiterMatch.entitlements`,
-     where the iCloud container is `iCloud.com.recruitermatch.app`).
+   - Change the bundle identifier from `com.skillsleuth.app` to something under your
+     own team (also update it in `project.yml` and in `SkillSleuth.entitlements`,
+     where the iCloud container is `iCloud.com.skillsleuth.app`).
    - Confirm the **iCloud** capability is enabled with the **CloudKit** service checked,
      and that it's using the container id from the entitlements file (Xcode may ask to
      create the container in your account the first time).

@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct RecruiterMatchApp: App {
+struct SkillSleuthApp: App {
     @StateObject private var store = CandidateStore()
 
     var body: some Scene {

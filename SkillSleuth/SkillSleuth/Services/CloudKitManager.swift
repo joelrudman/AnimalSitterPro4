@@ -111,7 +111,7 @@ final class CloudKitManager: ObservableObject {
         let saved = try await database.save(record)
 
         guard let result = Candidate(record: saved) else {
-            throw CloudKitError.underlying(NSError(domain: "RecruiterMatch", code: -1, userInfo: [NSLocalizedDescriptionKey: "Saved record could not be read back."]))
+            throw CloudKitError.underlying(NSError(domain: "SkillSleuth", code: -1, userInfo: [NSLocalizedDescriptionKey: "Saved record could not be read back."]))
         }
         return result
     }
