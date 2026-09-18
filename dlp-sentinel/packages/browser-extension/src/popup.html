@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  body { width: 300px; font: 13px/1.4 -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; padding: 14px; color: #1a1a1a; }
+  h1 { font-size: 14px; margin: 0 0 4px; }
+  .muted { color: #666; font-size: 12px; }
+  .row { display: flex; align-items: center; justify-content: space-between; margin: 10px 0; }
+  label { font-size: 12px; }
+  input[type=text] { width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+  .status { padding: 6px 8px; border-radius: 6px; font-size: 12px; margin: 8px 0; }
+  .status.ok { background: #e6f4ea; color: #1e7e34; }
+  .status.warn { background: #fff3cd; color: #8a6d00; }
+  button { background: #3b82f6; color: #fff; border: 0; border-radius: 6px; padding: 6px 10px; cursor: pointer; font-size: 12px; }
+  .notice { margin-top: 12px; font-size: 11px; color: #888; border-top: 1px solid #eee; padding-top: 8px; }
+</style>
+</head>
+<body>
+  <h1>🛡️ DLP Sentinel</h1>
+  <div class="muted">Monitoring web documents for your organization.</div>
+
+  <div id="native" class="status warn">Checking endpoint agent…</div>
+
+  <div class="row">
+    <label for="enabled">Monitoring enabled</label>
+    <input type="checkbox" id="enabled" checked />
+  </div>
+
+  <label for="ingest">Fallback web-ingest URL (optional)</label>
+  <input type="text" id="ingest" placeholder="https://dlp.example.com/v1/web-events" />
+  <div style="margin-top:8px"><button id="save">Save</button> <span id="saved" class="muted"></span></div>
+
+  <div class="notice">
+    This extension is part of your organization's data-protection program. It records that
+    monitored documents were opened/exported and where the device was — not their contents.
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

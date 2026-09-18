@@ -1,0 +1,18 @@
+{
+  "name": "@dlp-sentinel/endpoint-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cross-platform DLP Sentinel endpoint agent: file-event detection, check-in probe, off-network reporting.",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "bin": {
+    "dlp-agent": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node test/agent.test.js"
+  },
+  "dependencies": {
+    "@dlp-sentinel/shared": "0.1.0"
+  }
+}

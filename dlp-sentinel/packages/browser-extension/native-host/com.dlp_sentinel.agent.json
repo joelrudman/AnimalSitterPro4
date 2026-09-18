@@ -1,0 +1,9 @@
+{
+  "name": "com.dlp_sentinel.agent",
+  "description": "DLP Sentinel endpoint agent native-messaging host",
+  "path": "/opt/dlp-sentinel/dlp-agent-native-host",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://REPLACE_WITH_YOUR_EXTENSION_ID/"
+  ]
+}

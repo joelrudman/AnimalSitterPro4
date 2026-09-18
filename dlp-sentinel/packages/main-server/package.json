@@ -1,0 +1,14 @@
+{
+  "name": "@dlp-sentinel/main-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Internet-facing config + event-ingest + dashboard server for DLP Sentinel.",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "@dlp-sentinel/shared": "0.1.0"
+  }
+}

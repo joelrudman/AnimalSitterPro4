@@ -1,0 +1,9 @@
+{
+  "name": "@dlp-sentinel/browser-extension",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Manifest V3 extension for Google Docs / Office 365 web, delegating to the endpoint agent's native host.",
+  "scripts": {
+    "lint:manifest": "node -e \"JSON.parse(require('fs').readFileSync('manifest.json','utf8')); console.log('manifest.json OK')\""
+  }
+}

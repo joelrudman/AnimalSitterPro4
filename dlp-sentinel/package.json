@@ -1,0 +1,25 @@
+{
+  "name": "dlp-sentinel",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DLP data-exfiltration monitoring: endpoint agent + browser extension, internal check-in server, and internet-facing main server.",
+  "license": "SEE-LICENSE-IN-docs/PRIVACY-AND-LEGAL.md",
+  "workspaces": [
+    "packages/shared",
+    "packages/main-server",
+    "packages/checkin-server",
+    "packages/endpoint-agent",
+    "packages/browser-extension"
+  ],
+  "scripts": {
+    "main-server": "npm run start --workspace @dlp-sentinel/main-server",
+    "checkin-server": "npm run start --workspace @dlp-sentinel/checkin-server",
+    "agent": "npm run start --workspace @dlp-sentinel/endpoint-agent",
+    "demo": "node scripts/demo.js",
+    "keygen": "node scripts/gen-checkin-keys.js",
+    "test": "node packages/shared/test/signing.test.js && node packages/endpoint-agent/test/agent.test.js && node scripts/integration.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

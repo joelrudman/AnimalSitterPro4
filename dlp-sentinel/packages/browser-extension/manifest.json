@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "DLP Sentinel",
+  "version": "0.1.0",
+  "description": "Detects when monitored Google Docs / Office 365 documents are opened or exported and hands the event to the endpoint agent.",
+  "minimum_chrome_version": "116",
+  "permissions": ["storage", "nativeMessaging", "tabs"],
+  "host_permissions": [
+    "https://docs.google.com/*",
+    "https://drive.google.com/*",
+    "https://*.sharepoint.com/*",
+    "https://*.office.com/*",
+    "https://onedrive.live.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://docs.google.com/*",
+        "https://drive.google.com/*",
+        "https://*.sharepoint.com/*",
+        "https://*.office.com/*",
+        "https://onedrive.live.com/*"
+      ],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "DLP Sentinel"
+  }
+}

@@ -1,0 +1,48 @@
+# Realistic-ish local setup: main server + internal check-in server as separate
+# services sharing an out-of-band-provisioned check-in keypair.
+#
+#   1. generate keys once:   node scripts/gen-checkin-keys.js ./.keys
+#   2. docker compose up
+#   3. run an agent against it:
+#        DLP_MAIN_SERVER_URL=http://localhost:8443 npm run agent
+#
+# NOTE: in a real deployment the check-in server is on an INTERNAL network and is
+# NOT published to the internet. Here they share a compose network for demoing.
+
+services:
+  main-server:
+    image: node:20-alpine
+    working_dir: /app
+    command: ["node", "packages/main-server/src/server.js"]
+    environment:
+      PORT: "8443"
+      DLP_DATA_FILE: "/data/main-server.json"
+      DLP_CHECKIN_PUBLIC_KEY_FILE: "/keys/checkin-public.pem"
+      # PRODUCTION: set DLP_ADMIN_TOKEN to lock the config-write endpoints.
+    ports:
+      - "8443:8443"
+    volumes:
+      - ./:/app:ro
+      - ./.keys:/keys:ro
+      - main-data:/data
+
+  checkin-server:
+    image: node:20-alpine
+    working_dir: /app
+    command: ["node", "packages/checkin-server/src/server.js"]
+    environment:
+      PORT: "9000"
+      DLP_CHECKIN_PRIVATE_KEY_FILE: "/keys/checkin-private.pem"
+      DLP_MAIN_SERVER_URL: "http://main-server:8443"
+      DLP_CHECKIN_ID: "checkin-hq-1"
+    # In production DO NOT publish this port to the internet.
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./:/app:ro
+      - ./.keys:/keys:ro
+    depends_on:
+      - main-server
+
+volumes:
+  main-data:

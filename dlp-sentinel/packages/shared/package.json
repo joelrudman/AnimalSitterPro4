@@ -1,0 +1,11 @@
+{
+  "name": "@dlp-sentinel/shared",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared wire protocol, telemetry schema and HMAC signing for DLP Sentinel.",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node test/signing.test.js"
+  }
+}

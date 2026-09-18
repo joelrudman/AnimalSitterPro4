@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DLP Sentinel — Console</title>
+<style>
+  :root {
+    --bg: #0e1116; --panel: #161b22; --border: #2a313c; --fg: #e6edf3;
+    --muted: #8b949e; --accent: #3b82f6; --alert: #f85149; --warn: #d29922; --ok: #3fb950;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.5 -apple-system, Segoe UI, Roboto, sans-serif; background: var(--bg); color: var(--fg); }
+  header { padding: 16px 24px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 12px; }
+  header h1 { font-size: 16px; margin: 0; font-weight: 600; }
+  header .sub { color: var(--muted); font-size: 12px; }
+  .banner { background: #3d2b12; color: #f0d58c; padding: 8px 24px; font-size: 12px; border-bottom: 1px solid var(--border); }
+  main { padding: 24px; max-width: 1200px; margin: 0 auto; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 24px; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+  .card .n { font-size: 28px; font-weight: 700; }
+  .card .l { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 24px 0 8px; }
+  table { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border); font-size: 13px; vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; }
+  tr:last-child td { border-bottom: none; }
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+  .pill.alert { background: rgba(248,81,73,.15); color: var(--alert); }
+  .pill.delayed { background: rgba(210,153,34,.15); color: var(--warn); }
+  .pill.on { background: rgba(63,185,80,.15); color: var(--ok); }
+  code { background: #0b0e13; padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+  .muted { color: var(--muted); }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  details { margin-top: 4px; }
+  summary { cursor: pointer; color: var(--muted); font-size: 12px; }
+  pre { margin: 6px 0 0; background: #0b0e13; padding: 8px; border-radius: 6px; overflow-x: auto; font-size: 11px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🛡️ DLP Sentinel</h1>
+  <span class="sub">exfiltration monitoring console</span>
+</header>
+<div class="banner">
+  ⚠️ Demo console — unauthenticated and for local evaluation only. Do not expose this as-is. See docs/ARCHITECTURE.md §8.
+</div>
+<main>
+  <div class="cards" id="cards"></div>
+
+  <h2>Recent events</h2>
+  <table>
+    <thead>
+      <tr><th>When</th><th>Disposition</th><th>Host</th><th>Action</th><th>File</th><th>Source IP</th><th>Detail</th></tr>
+    </thead>
+    <tbody id="events"><tr><td colspan="7" class="muted">loading…</td></tr></tbody>
+  </table>
+
+  <h2>Enrolled hosts</h2>
+  <table>
+    <thead>
+      <tr><th>Host</th><th>Name</th><th>Agent</th><th>Last seen</th><th>Last heartbeat</th></tr>
+    </thead>
+    <tbody id="hosts"><tr><td colspan="5" class="muted">loading…</td></tr></tbody>
+  </table>
+</main>
+
+<script>
+const dispClass = (d) => d === 'off-network-alert' ? 'alert' : d === 'off-network-delayed' ? 'delayed' : 'on';
+const dispLabel = (d) => d === 'off-network-alert' ? 'OFF-NET ALERT' : d === 'off-network-delayed' ? 'OFF-NET (delayed)' : 'on-network';
+const fmt = (iso) => iso ? new Date(iso).toLocaleString() : '—';
+const ago = (ms) => { if (!ms) return '—'; const s = Math.round((Date.now()-ms)/1000); if (s<60) return s+'s ago'; if (s<3600) return Math.round(s/60)+'m ago'; return Math.round(s/3600)+'h ago'; };
+
+async function refresh() {
+  try {
+    const [stats, events, hosts] = await Promise.all([
+      fetch('/api/stats').then(r=>r.json()),
+      fetch('/api/events?limit=100').then(r=>r.json()),
+      fetch('/api/hosts').then(r=>r.json()),
+    ]);
+
+    const alerts = (stats.byDisposition && stats.byDisposition['off-network-alert']) || 0;
+    document.getElementById('cards').innerHTML = [
+      ['Off-network alerts', alerts, 'alert'],
+      ['Total events', stats.events, ''],
+      ['Enrolled hosts', stats.hosts, ''],
+      ['On-network relays', (stats.byDisposition && stats.byDisposition['on-network']) || 0, ''],
+    ].map(([l,n,c]) => `<div class="card"><div class="n" style="${c==='alert'&&n>0?'color:var(--alert)':''}">${n}</div><div class="l">${l}</div></div>`).join('');
+
+    document.getElementById('events').innerHTML = events.length ? events.map(e => `
+      <tr>
+        <td class="muted">${fmt(e.receivedAt)}</td>
+        <td><span class="pill ${dispClass(e.disposition)}">${dispLabel(e.disposition)}</span></td>
+        <td class="mono">${(e.host&&e.host.hostname)||e.hostId||'—'}</td>
+        <td><code>${e.action}</code></td>
+        <td>${(e.file&&e.file.name)||'—'} ${e.context&&e.context.docUrl?`<div class="muted mono" style="font-size:11px">${e.context.docUrl}</div>`:''}</td>
+        <td class="mono">${e.serverObservedIp||'—'}</td>
+        <td><details><summary>host</summary><pre>${JSON.stringify(e.host||{},null,1)}</pre></details></td>
+      </tr>`).join('') : '<tr><td colspan="7" class="muted">no events yet</td></tr>';
+
+    document.getElementById('hosts').innerHTML = hosts.length ? hosts.map(h => `
+      <tr>
+        <td class="mono">${h.hostId}</td>
+        <td>${h.name||'—'}</td>
+        <td>${h.agentVersion||'—'}</td>
+        <td class="muted">${fmt(h.lastSeen)}</td>
+        <td class="muted">${fmt(h.lastHeartbeat)}</td>
+      </tr>`).join('') : '<tr><td colspan="5" class="muted">no hosts enrolled</td></tr>';
+  } catch (err) {
+    console.error(err);
+  }
+}
+refresh();
+setInterval(refresh, 3000);
+</script>
+</body>
+</html>
