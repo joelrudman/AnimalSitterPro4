@@ -11,7 +11,7 @@ import SwiftData
 /// in `AppServices` and starts from `App.init`.
 @MainActor
 final class GeofenceManager {
-    static let monitorName = "WhoIsThatPubs"
+    static let monitorName = "PourtraitPubs"
     static let maxRegions = 20
     static let regionRadius: CLLocationDistance = 100
 

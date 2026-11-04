@@ -26,7 +26,7 @@ struct PubArrivalAttributes: ActivityAttributes {
 }
 
 enum SharedConfig {
-    static let appGroupID = "group.com.whoisthat.app"
+    static let appGroupID = "group.com.pourtrait.app"
 
     static var thumbnailsDirectory: URL? {
         FileManager.default

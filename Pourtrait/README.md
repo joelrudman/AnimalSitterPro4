@@ -1,4 +1,4 @@
-# Who Is That?
+# Pourtrait
 
 An iPhone app for remembering bartenders. Save a bartender's name, a description and a
 photo. The app tags each one with the pub you're in, which it works out from GPS and
@@ -33,7 +33,7 @@ need a Mac with Xcode 16 or later.
 ## Arrival alerts (Live Activity)
 
 Files: `Services/GeofenceManager.swift`, `Services/ArrivalAlerts.swift`,
-`Shared/PubArrivalAttributes.swift` and the `WhoIsThatWidgets/` extension target, which
+`Shared/PubArrivalAttributes.swift` and the `PourtraitWidgets/` extension target, which
 draws the Lock Screen and Dynamic Island views.
 
 1. `GeofenceManager` uses `CLMonitor` (iOS 17) to watch a 100 m circle around each pub
@@ -57,7 +57,7 @@ push-to-start notification. The app already structures the data for this, but it
 mean sending location-derived data off the phone, so it isn't included.
 
 Photos for the Live Activity are copied as 96 px thumbnails into the shared App Group
-container (`group.com.whoisthat.app`) so the widget extension can read them.
+container (`group.com.pourtrait.app`) so the widget extension can read them.
 
 ### Privacy design choice
 
@@ -71,16 +71,16 @@ real people posted publicly raise consent issues, so that was left out of v1.
 ## Setup on your Mac
 
 1. Install XcodeGen: `brew install xcodegen`
-2. In this folder, run `xcodegen generate` and then `open WhoIsThat.xcodeproj`. Xcode will
+2. In this folder, run `xcodegen generate` and then `open Pourtrait.xcodeproj`. Xcode will
    fetch the Google Mobile Ads and UMP Swift packages.
-3. **Signing & Capabilities** (WhoIsThat target):
+3. **Signing & Capabilities** (Pourtrait target):
    - Set your Team.
-   - Change the bundle ID `com.whoisthat.app` to your own. Update it in `project.yml`, the
-     iCloud container in `WhoIsThat.entitlements` and `AppConfig.cloudKitContainerID`.
+   - Change the bundle ID `com.pourtrait.app` to your own. Update it in `project.yml`, the
+     iCloud container in `Pourtrait.entitlements` and `AppConfig.cloudKitContainerID`.
    - Check that **iCloud → CloudKit**, **Push Notifications** and **Background Modes →
      Remote notifications** are on. CloudKit sync uses silent pushes.
-   - Do the same for the `WhoIsThatWidgets` target (bundle ID `com.whoisthat.app.widgets`).
-     Both targets need the **App Group** `group.com.whoisthat.app`, renamed to match
+   - Do the same for the `PourtraitWidgets` target (bundle ID `com.pourtrait.app.widgets`).
+     Both targets need the **App Group** `group.com.pourtrait.app`, renamed to match
      your bundle ID. The app also needs **Time Sensitive Notifications**.
 4. Run it on a real iPhone signed in to iCloud. MapKit pub search and the camera don't
    work well in the simulator.
@@ -98,7 +98,7 @@ real people posted publicly raise consent issues, so that was left out of v1.
     Tracking Transparency) message too; UMP will then show the ATT prompt.
 - **CloudKit:** save a bartender once in a development build. Then open the CloudKit
   Console and **deploy the schema to Production**. Otherwise App Store builds can't sync.
-- **In-app purchase:** create a non-consumable product `com.whoisthat.app.removeads` (or
+- **In-app purchase:** create a non-consumable product `com.pourtrait.app.removeads` (or
   your renamed ID) in App Store Connect.
 - **App icon:** add a 1024×1024 image to `Assets.xcassets/AppIcon.appiconset`.
 - **App privacy labels:** declare Location (app functionality, not linked), Photos (user

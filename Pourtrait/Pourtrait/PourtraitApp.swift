@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct WhoIsThatApp: App {
+struct PourtraitApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
 
     @State private var syncMonitor: SyncMonitor

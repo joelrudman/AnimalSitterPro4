@@ -1,6 +1,6 @@
-name: WhoIsThat
+name: Pourtrait
 options:
-  bundleIdPrefix: com.whoisthat
+  bundleIdPrefix: com.pourtrait
   deploymentTarget:
     iOS: "17.0"
   createIntermediateGroups: true
@@ -22,48 +22,48 @@ settings:
     DEVELOPMENT_TEAM: "" # set to your Apple Developer Team ID before building
 
 targets:
-  WhoIsThat:
+  Pourtrait:
     type: application
     platform: iOS
     sources:
-      - path: WhoIsThat
+      - path: Pourtrait
         excludes:
           - "Info.plist"
-          - "WhoIsThat.entitlements"
+          - "Pourtrait.entitlements"
           - "Configuration.storekit"
-      - path: WhoIsThat/Configuration.storekit
+      - path: Pourtrait/Configuration.storekit
         buildPhase: none
       - path: Shared
     dependencies:
       - package: GoogleMobileAds
       - package: UserMessagingPlatform
-      - target: WhoIsThatWidgets   # embeds the Live Activity extension
+      - target: PourtraitWidgets   # embeds the Live Activity extension
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.whoisthat.app
-        PRODUCT_NAME: WhoIsThat
-        INFOPLIST_FILE: WhoIsThat/Info.plist
-        CODE_SIGN_ENTITLEMENTS: WhoIsThat/WhoIsThat.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: com.pourtrait.app
+        PRODUCT_NAME: Pourtrait
+        INFOPLIST_FILE: Pourtrait/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Pourtrait/Pourtrait.entitlements
         ENABLE_PREVIEWS: "YES"
         OTHER_LDFLAGS: "$(inherited) -ObjC"
     scheme:
-      storeKitConfiguration: WhoIsThat/Configuration.storekit
+      storeKitConfiguration: Pourtrait/Configuration.storekit
 
-  WhoIsThatWidgets:
+  PourtraitWidgets:
     type: app-extension
     platform: iOS
     sources:
-      - path: WhoIsThatWidgets
+      - path: PourtraitWidgets
         excludes:
           - "Info.plist"
-          - "WhoIsThatWidgets.entitlements"
+          - "PourtraitWidgets.entitlements"
       - path: Shared
     dependencies:
       - sdk: WidgetKit.framework
       - sdk: SwiftUI.framework
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.whoisthat.app.widgets
-        INFOPLIST_FILE: WhoIsThatWidgets/Info.plist
-        CODE_SIGN_ENTITLEMENTS: WhoIsThatWidgets/WhoIsThatWidgets.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: com.pourtrait.app.widgets
+        INFOPLIST_FILE: PourtraitWidgets/Info.plist
+        CODE_SIGN_ENTITLEMENTS: PourtraitWidgets/PourtraitWidgets.entitlements
         SKIP_INSTALL: "YES"

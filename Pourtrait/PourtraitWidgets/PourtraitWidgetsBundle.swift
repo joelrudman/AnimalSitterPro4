@@ -2,7 +2,7 @@ import WidgetKit
 import SwiftUI
 
 @main
-struct WhoIsThatWidgetsBundle: WidgetBundle {
+struct PourtraitWidgetsBundle: WidgetBundle {
     var body: some Widget {
         PubArrivalLiveActivity()
     }

@@ -6,7 +6,7 @@ import UserMessagingPlatform
 /// Handles ad consent (GDPR/UK GDPR via Google's UMP — required to serve ads in the
 /// UK/EEA) and starting the Google Mobile Ads SDK.
 ///
-/// Ad policy for Who Is That? is deliberately light: one small banner at the bottom of the
+/// Ad policy for Pourtrait is deliberately light: one small banner at the bottom of the
 /// browsing screens. No interstitials, no video, no ads on the add/edit screens or
 /// camera, and none at all once "Remove Ads" is bought.
 @Observable

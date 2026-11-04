@@ -304,7 +304,7 @@ body{{background:#F4EFE8;padding:56px 60px 64px}}
 h1{{font-size:44px;letter-spacing:-1px;color:#1d1d1f}} .sub{{color:#6e6e73;font-size:19px;margin:8px 0 40px}}
 .grid{{display:grid;grid-template-columns:repeat(4,417px);gap:44px 48px}}
 figure{{display:flex;flex-direction:column;align-items:center;gap:16px}} figcaption{{font-size:20px;font-weight:600;color:#1d1d1f}}
-</style></head><body id="shot"><h1>Who Is That?</h1><div class="sub">Design mockups of the iPhone app. Portraits are placeholder illustrations, and the advert is a sample of the single banner.</div><div class="grid">{cards}</div></body></html>''')
+</style></head><body id="shot"><h1>Pourtrait</h1><div class="sub">Remember who's behind the bar. Design mockups of the iPhone app. Portraits are placeholder illustrations, and the advert is a sample of the single banner.</div><div class="grid">{cards}</div></body></html>''')
 
 write()
 print("ok")
