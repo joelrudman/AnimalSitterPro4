@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>BarBook</string>
+	<string>Who Is That?</string>
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
@@ -33,7 +33,11 @@
 	</array>
 
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>BarBook uses your location to work out which pub you're in, so it can show and file bartenders for that pub.</string>
+	<string>Your location is used to work out which pub you're in, so the app can show and file bartenders for that pub.</string>
+	<key>NSSupportsLiveActivities</key>
+	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Allow "Always" so the app can show which bartenders you know the moment you walk into a pub, even when the app is closed. Your location never leaves your phone.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Take a photo of a bartender to help you remember them.</string>
 	<key>NSPhotoLibraryUsageDescription</key>

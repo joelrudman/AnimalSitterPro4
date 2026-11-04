@@ -5,11 +5,44 @@ struct SettingsView: View {
     @Environment(SyncMonitor.self) private var sync
     @Environment(PurchaseManager.self) private var purchases
     @Environment(AdsManager.self) private var ads
+    @Environment(CurrentPubModel.self) private var pubModel
+    @Environment(\.openURL) private var openURL
+    @AppStorage(ArrivalAlerts.enabledKey) private var arrivalAlertsEnabled = true
     @Query private var bartenders: [Bartender]
 
     var body: some View {
         NavigationStack {
             Form {
+                Section {
+                    Toggle("Show bartenders I know when I arrive", isOn: $arrivalAlertsEnabled)
+                    if arrivalAlertsEnabled {
+                        let location = pubModel.locationService
+                        if location.isAlwaysAuthorized {
+                            Label("Works even when the app is closed", systemImage: "checkmark.circle.fill")
+                                .foregroundStyle(.green)
+                        } else if location.authorizationStatus == .denied {
+                            Button("Turn on location in Settings") {
+                                if let url = URL(string: UIApplication.openSettingsURLString) { openURL(url) }
+                            }
+                        } else {
+                            Button("Also alert me when the app is closed") {
+                                Task {
+                                    _ = await ArrivalAlerts.requestNotificationPermission()
+                                    if location.authorizationStatus == .notDetermined {
+                                        location.requestAuthorization()
+                                    } else {
+                                        location.requestAlwaysAuthorization()
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } header: {
+                    Text("Arrival alerts")
+                } footer: {
+                    Text("When you walk into a pub where you've saved bartenders, a Live Activity shows their names on your Lock Screen and in the Dynamic Island. If the app is closed you'll get a notification instead — tap it to open the Live Activity. Needs \"Always\" location; your location never leaves your phone.")
+                }
+
                 Section {
                     LabeledContent("Status") {
                         HStack(spacing: 6) {
@@ -27,7 +60,7 @@ struct SettingsView: View {
                 } header: {
                     Text("iCloud backup")
                 } footer: {
-                    Text("Everything is stored in your private iCloud and backed up automatically. On a new iPhone, or after reinstalling, sign in with the same Apple ID and open BarBook — your bartenders and photos are restored by themselves. Nothing is shared with anyone else.")
+                    Text("Everything is stored in your private iCloud and backed up automatically. On a new iPhone, or after reinstalling, sign in with the same Apple ID and open the app — your bartenders and photos are restored by themselves. Nothing is shared with anyone else.")
                 }
 
                 Section {
@@ -61,7 +94,7 @@ struct SettingsView: View {
                 } header: {
                     Text("Adverts")
                 } footer: {
-                    Text("BarBook is free and kept going by a small banner at the bottom of the screen — never pop-ups or videos. A one-off purchase removes it for good.")
+                    Text("The app is free and kept going by a small banner at the bottom of the screen — never pop-ups or videos. A one-off purchase removes it for good.")
                 }
 
                 Section("About") {

@@ -52,3 +52,14 @@ final class Bartender {
         }
     }
 }
+
+extension Bartender {
+    /// Bartenders recorded at `pub`, favourites first. Used by the Here tab's Live
+    /// Activity and by background geofence events (which have no SwiftUI @Query).
+    static func recorded(at pub: Pub, in context: ModelContext) -> [Bartender] {
+        let all = (try? context.fetch(FetchDescriptor<Bartender>(sortBy: [SortDescriptor(\.name)]))) ?? []
+        return all
+            .filter { $0.pub.isSamePlace(as: pub) }
+            .sorted { ($0.isFavourite ? 0 : 1, $0.name) < ($1.isFavourite ? 0 : 1, $1.name) }
+    }
+}

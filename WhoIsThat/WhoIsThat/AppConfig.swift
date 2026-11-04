@@ -2,11 +2,11 @@ import Foundation
 
 /// Identifiers you'll need to change to your own before shipping. See README.
 enum AppConfig {
-    /// Must match the container in BarBook.entitlements.
-    static let cloudKitContainerID = "iCloud.com.barbook.app"
+    /// Must match the container in WhoIsThat.entitlements.
+    static let cloudKitContainerID = "iCloud.com.whoisthat.app"
 
     /// Non-consumable in-app purchase that turns adverts off.
-    static let removeAdsProductID = "com.barbook.app.removeads"
+    static let removeAdsProductID = "com.whoisthat.app.removeads"
 
     #if DEBUG
     /// Google's public test banner unit — always fills, never earns.

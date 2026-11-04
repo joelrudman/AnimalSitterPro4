@@ -8,12 +8,12 @@
       "internalID" : "6740000001",
       "localizations" : [
         {
-          "description" : "Remove all adverts from BarBook, for good.",
+          "description" : "Remove all adverts, for good.",
           "displayName" : "Remove Ads",
           "locale" : "en_GB"
         }
       ],
-      "productID" : "com.barbook.app.removeads",
+      "productID" : "com.whoisthat.app.removeads",
       "referenceName" : "Remove Ads",
       "type" : "NonConsumable"
     }

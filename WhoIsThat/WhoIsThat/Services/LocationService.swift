@@ -7,7 +7,7 @@ enum LocationError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .denied: return "Location access is off for BarBook. Turn it on in Settings to find the pub you're in."
+        case .denied: return "Location access is off. Turn it on in Settings to find the pub you're in."
         case .unavailable: return "Couldn't get your location. Try again in a moment."
         }
     }
@@ -34,8 +34,15 @@ final class LocationService: NSObject, CLLocationManagerDelegate {
         authorizationStatus == .authorizedWhenInUse || authorizationStatus == .authorizedAlways
     }
 
+    var isAlwaysAuthorized: Bool { authorizationStatus == .authorizedAlways }
+
     func requestAuthorization() {
         manager.requestWhenInUseAuthorization()
+    }
+
+    /// Needed for arrival alerts while the app is closed (geofences run in the background).
+    func requestAlwaysAuthorization() {
+        manager.requestAlwaysAuthorization()
     }
 
     func currentLocation() async throws -> CLLocation {

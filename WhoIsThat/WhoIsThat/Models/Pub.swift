@@ -2,7 +2,7 @@ import Foundation
 import CoreLocation
 
 /// A pub (or bar) — either found via Apple Maps or typed in by hand.
-struct Pub: Hashable, Identifiable {
+struct Pub: Hashable, Identifiable, Codable {
     var name: String
     var address: String
     var latitude: Double

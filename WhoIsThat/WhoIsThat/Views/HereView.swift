@@ -81,7 +81,7 @@ struct CurrentPubCard: View {
     var body: some View {
         switch pubModel.state {
         case .idle, .needsPermission:
-            status(icon: "location", title: "Allow location", detail: "BarBook needs your location to tell which pub you're in.") {
+            status(icon: "location", title: "Allow location", detail: "We need your location to tell which pub you're in.") {
                 Button("Allow") { Task { await pubModel.refresh() } }
             }
         case .denied:

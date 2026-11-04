@@ -21,7 +21,7 @@ final class CurrentPubModel {
     /// True when the user picked the pub themselves; we keep their choice until they move.
     private(set) var isManualSelection = false
 
-    @ObservationIgnored private let locationService: LocationService
+    @ObservationIgnored let locationService: LocationService
 
     init(locationService: LocationService) {
         self.locationService = locationService
