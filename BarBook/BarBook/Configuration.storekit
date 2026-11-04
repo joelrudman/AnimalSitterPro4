@@ -1,0 +1,24 @@
+{
+  "identifier" : "4C1B9A2E",
+  "nonRenewingSubscriptions" : [ ],
+  "products" : [
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : true,
+      "internalID" : "6740000001",
+      "localizations" : [
+        {
+          "description" : "Remove all adverts from BarBook, for good.",
+          "displayName" : "Remove Ads",
+          "locale" : "en_GB"
+        }
+      ],
+      "productID" : "com.barbook.app.removeads",
+      "referenceName" : "Remove Ads",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : { },
+  "subscriptionGroups" : [ ],
+  "version" : { "major" : 3, "minor" : 0 }
+}
