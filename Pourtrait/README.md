@@ -70,9 +70,18 @@ real people posted publicly raise consent issues, so that was left out of v1.
 
 ## Setup on your Mac
 
-1. Install XcodeGen: `brew install xcodegen`
-2. In this folder, run `xcodegen generate` and then `open Pourtrait.xcodeproj`. Xcode will
-   fetch the Google Mobile Ads and UMP Swift packages.
+1. Get the code onto your Mac, either with
+   `git clone https://github.com/joelrudman/animalsitterpro4.git` followed by
+   `git checkout claude/pub-bartender-app`, or by downloading the branch as a ZIP from
+   GitHub.
+2. Double-click **`Pourtrait/Pourtrait.xcodeproj`**. The first time it opens, Xcode
+   downloads the Google Mobile Ads and UMP Swift packages, which takes a minute.
+   If Xcode says it can't resolve them, choose **File → Packages → Resolve Package
+   Versions**.
+
+   The project is committed, so you don't need XcodeGen. To regenerate it after adding
+   files, run `ruby scripts/generate_xcodeproj.rb` (needs `gem install xcodeproj`), or
+   `xcodegen generate` if you prefer XcodeGen.
 3. **Signing & Capabilities** (Pourtrait target):
    - Set your Team.
    - Change the bundle ID `com.pourtrait.app` to your own. Update it in `project.yml`, the
