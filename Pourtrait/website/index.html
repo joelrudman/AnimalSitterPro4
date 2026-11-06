@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pourtrait – Remember who's behind the bar</title>
+  <meta name="description" content="Pourtrait is an iPhone app for remembering the bartenders at your local. Save their name, a photo and a few notes, and see who you know the moment you walk in.">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Social sharing previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pourtrait – Remember who's behind the bar">
+  <meta property="og:description" content="Save the bartenders you meet, filed by pub automatically. See who you know the moment you walk in.">
+  <meta property="og:image" content="images/here.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- TODO: once the app is live, add your App Store ID to show Safari's "Open in App Store" banner:
+  <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID"> -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Cpath d='M14 20h26v24a6 6 0 0 1-6 6H20a6 6 0 0 1-6-6z' fill='%23E8952B'/%3E%3Cpath d='M40 26h4a6 6 0 0 1 0 12h-4' stroke='%23E8952B' stroke-width='4' fill='none'/%3E%3C/svg%3E">
+
+  <style>
+    :root {
+      --bg: #000;
+      --surface: #1c1c1e;
+      --surface-2: #2c2c2e;
+      --text: #fff;
+      --muted: #a1a1a6;
+      --amber: #E8952B;
+      --amber-deep: #D98819;
+      --radius: 22px;
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--amber); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { display: block; max-width: 100%; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* Nav */
+    header.nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(0,0,0,.72);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; font-size: 19px; letter-spacing: -.2px; }
+    .brand:hover { text-decoration: none; }
+    .brand-icon { width: 30px; height: 30px; border-radius: 8px; background: var(--surface); display: grid; place-items: center; }
+    .nav-links { display: flex; gap: 26px; font-size: 15px; }
+    .nav-links a { color: var(--muted); }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+    /* Buttons */
+    .store-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #fff; color: #000;
+      padding: 10px 20px 10px 16px; border-radius: 14px;
+      font-weight: 600; line-height: 1.15;
+      transition: transform .15s ease;
+    }
+    .store-badge:hover { text-decoration: none; transform: translateY(-1px); }
+    .store-badge small { display: block; font-size: 11px; font-weight: 500; }
+    .store-badge span { font-size: 19px; letter-spacing: -.3px; }
+    .coming-soon { display: block; margin-top: 12px; font-size: 13px; color: var(--muted); }
+
+    /* Hero */
+    .hero { padding: 80px 0 40px; overflow: hidden; }
+    .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--amber); font-weight: 600; font-size: 15px; margin-bottom: 18px; }
+    h1 { font-size: clamp(42px, 6.4vw, 72px); line-height: 1.02; letter-spacing: -2px; font-weight: 800; }
+    h1 em { font-style: normal; color: var(--amber); }
+    .lede { font-size: clamp(18px, 2vw, 21px); color: var(--muted); margin: 22px 0 32px; max-width: 34ch; }
+    .hero-shot { position: relative; justify-self: center; }
+    .hero-shot::before {
+      content: ""; position: absolute; inset: 10% -20% -10%;
+      background: radial-gradient(closest-side, rgba(232,149,43,.35), transparent 70%);
+      filter: blur(20px); z-index: -1;
+    }
+
+    /* Phone frame */
+    .phone {
+      width: 100%; max-width: 300px;
+      border-radius: 46px; padding: 9px;
+      background: linear-gradient(145deg, #3a3a3c, #111);
+      box-shadow: 0 30px 80px rgba(0,0,0,.6), inset 0 0 0 1px rgba(255,255,255,.08);
+    }
+    .phone img { border-radius: 38px; width: 100%; height: auto; aspect-ratio: 921 / 2000; object-fit: cover; }
+
+    /* Sections */
+    section { padding: 88px 0; }
+    .section-head { text-align: center; max-width: 640px; margin: 0 auto 52px; }
+    h2 { font-size: clamp(32px, 4.4vw, 48px); line-height: 1.08; letter-spacing: -1.2px; font-weight: 800; }
+    .section-head p { color: var(--muted); font-size: 19px; margin-top: 14px; }
+
+    /* Features */
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .feature { background: var(--surface); border-radius: var(--radius); padding: 28px; }
+    .feature .icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(232,149,43,.14); display: grid; place-items: center; margin-bottom: 18px; }
+    .feature h3 { font-size: 19px; letter-spacing: -.3px; margin-bottom: 6px; }
+    .feature p { color: var(--muted); font-size: 16px; }
+
+    /* Screens */
+    .screens { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+    .screens figure { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+    .screens figcaption { text-align: center; }
+    .screens figcaption strong { display: block; font-size: 17px; }
+    .screens figcaption span { color: var(--muted); font-size: 15px; }
+
+    /* How it works */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; counter-reset: step; }
+    .step { border-top: 2px solid var(--surface-2); padding-top: 22px; }
+    .step::before { counter-increment: step; content: counter(step); display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--amber); color: #000; font-weight: 800; margin-bottom: 14px; }
+    .step h3 { font-size: 19px; margin-bottom: 6px; }
+    .step p { color: var(--muted); }
+
+    /* Privacy band */
+    .privacy-band { background: var(--surface); border-radius: 28px; padding: 52px; display: grid; grid-template-columns: auto 1fr; gap: 36px; align-items: center; }
+    .privacy-band .shield { width: 84px; height: 84px; border-radius: 24px; background: rgba(232,149,43,.14); display: grid; place-items: center; }
+    .privacy-band h2 { font-size: clamp(28px, 3.4vw, 38px); }
+    .privacy-band p { color: var(--muted); font-size: 18px; margin: 12px 0 16px; max-width: 62ch; }
+
+    /* FAQ */
+    .faq { max-width: 760px; margin: 0 auto; }
+    details { border-bottom: 1px solid var(--surface-2); padding: 20px 0; }
+    summary { cursor: pointer; font-weight: 600; font-size: 18px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; color: var(--amber); font-size: 24px; line-height: 1; }
+    details[open] summary::after { content: "–"; }
+    details p { color: var(--muted); margin-top: 10px; font-size: 16px; }
+
+    /* CTA + footer */
+    .cta { text-align: center; }
+    .cta p { color: var(--muted); font-size: 19px; margin: 14px 0 30px; }
+    footer { border-top: 1px solid rgba(255,255,255,.08); padding: 32px 0 44px; color: var(--muted); font-size: 14px; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    footer nav { display: flex; gap: 22px; }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 900px) {
+      .hero { padding-top: 48px; }
+      .hero .wrap { grid-template-columns: 1fr; text-align: center; }
+      .lede { margin-left: auto; margin-right: auto; }
+      .features, .steps { grid-template-columns: 1fr 1fr; }
+      .screens { grid-template-columns: 1fr 1fr; }
+      .privacy-band { grid-template-columns: 1fr; padding: 36px 28px; text-align: center; }
+      .privacy-band .shield { margin: 0 auto; }
+      .privacy-band p { margin-left: auto; margin-right: auto; }
+    }
+    @media (max-width: 600px) {
+      .wrap { padding: 0 16px; }
+      .nav-links { display: none; }
+      section { padding: 64px 0; }
+      .features, .steps { grid-template-columns: 1fr; }
+      .screens { gap: 28px 14px; }
+      .phone { border-radius: 34px; padding: 6px; }
+      .phone img { border-radius: 29px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 6.5h11v11a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z" fill="#E8952B"/><path d="M15 9h2.2a2.8 2.8 0 0 1 0 5.6H15" stroke="#E8952B" stroke-width="2" fill="none"/></svg>
+        </span>
+        Pourtrait
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#screens">Screenshots</a>
+        <a href="#faq">FAQ</a>
+        <a href="privacy.htm">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <div class="eyebrow">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 5.2-7 13-7 13S5 14.2 5 9a7 7 0 0 1 7-7zm0 4.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" fill="#E8952B"/></svg>
+            For iPhone
+          </div>
+          <h1>Remember who's <em>behind the bar.</em></h1>
+          <p class="lede">Save the bartenders you meet with a name, a photo and a few notes. Pourtrait files them under the right pub automatically, and shows you who you know the moment you walk in.</p>
+
+          <!-- TODO: replace href with your App Store link once the app is live, e.g.
+               https://apps.apple.com/app/pourtrait/idXXXXXXXXXX
+               and swap this button for Apple's official badge from
+               https://developer.apple.com/app-store/marketing/guidelines/ -->
+          <a class="store-badge" href="#" aria-label="Download Pourtrait on the App Store">
+            <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-3.4 14.6H6.4l1-1.8h2.2zm7.3-3.5H6.1v-1.7h3.3l2.8-4.9-.9-1.6 1.5-.8.4.8.4-.8 1.5.8-3.8 6.5h2.3zm1.7 3.5-1-1.8 2.6-.1.1 1.9zm.3-3.5h-2.4l-1-1.7h2.4z" fill="#000"/></svg>
+            <div><small>Download on the</small><span>App Store</span></div>
+          </a>
+          <span class="coming-soon">Coming soon to the App Store</span>
+        </div>
+
+        <div class="hero-shot">
+          <div class="phone">
+            <img src="images/here.webp" width="921" height="2000" alt="Pourtrait's Here screen showing the pub you're in, Hall &amp; Woodhouse Crowthorne, with an Add bartender button">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Never blank on a name again.</h2>
+          <p>Everything you need to be a regular, wherever you drink.</p>
+        </div>
+        <div class="features">
+          <article class="feature">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 5.2-7 13-7 13S5 14.2 5 9a7 7 0 0 1 7-7zm0 4.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" fill="#E8952B"/></svg></div>
+            <h3>Knows which pub you're in</h3>
+            <p>Uses your location and Apple Maps to work out the pub, so every bartender is filed in the right place. Wrong guess? Change it in one tap.</p>
+          </article>
+          <article class="feature">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M3 8h4l2-3h6l2 3h4v11H3z" fill="none" stroke="#E8952B" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.6" fill="none" stroke="#E8952B" stroke-width="2"/></svg></div>
+            <h3>Name, photo and notes</h3>
+            <p>Add a photo from your camera or library, plus whatever helps you remember: their signature drink, the quiz night they run, their football team.</p>
+          </article>
+          <article class="feature">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="4" fill="none" stroke="#E8952B" stroke-width="2"/><rect x="8.5" y="4.5" width="7" height="2.2" rx="1.1" fill="#E8952B"/></svg></div>
+            <h3>Live Activity on arrival</h3>
+            <p>Walk into a pub where you've saved bartenders and their names appear on your Lock Screen and in the Dynamic Island.</p>
+          </article>
+          <article class="feature">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.6" fill="#E8952B"/><path d="M2 20c0-4 3-6.5 7-6.5s7 2.5 7 6.5z" fill="#E8952B"/><circle cx="17" cy="9" r="3" fill="#E8952B" opacity=".6"/><path d="M16 14c3.6 0 6 2 6 6h-4.5" fill="#E8952B" opacity=".6"/></svg></div>
+            <h3>Your whole directory</h3>
+            <p>Every bartender you know, grouped by pub with the nearest first. Search by name, pub or notes, or filter to your favourites.</p>
+          </article>
+          <article class="feature">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M7 18a5 5 0 0 1-.6-10A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z" fill="none" stroke="#E8952B" stroke-width="2" stroke-linejoin="round"/></svg></div>
+            <h3>Backed up to iCloud</h3>
+            <p>Saved to your private iCloud automatically. Get a new iPhone, sign in, and everything comes back. Works offline too, and syncs when you're back in signal.</p>
+          </article>
+          <article class="feature">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3.2l2.7 5.6 6.1.8-4.5 4.2 1.2 6.1L12 16.9l-5.5 3 1.2-6.1-4.5-4.2 6.1-.8z" fill="#E8952B"/></svg></div>
+            <h3>Free, with no pop-ups</h3>
+            <p>Supported by one small banner, never pop-ups or video ads. A one-off purchase removes it for good.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section id="screens">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>A look inside.</h2>
+          <p>Designed to be quick to use with a pint in one hand.</p>
+        </div>
+        <div class="screens">
+          <figure>
+            <div class="phone"><img src="images/here.webp" width="921" height="2000" loading="lazy" alt="Here screen: the app has detected Hall &amp; Woodhouse Crowthorne and invites you to add the first bartender"></div>
+            <figcaption><strong>Here</strong><span>The pub you're in</span></figcaption>
+          </figure>
+          <figure>
+            <div class="phone"><img src="images/add-bartender.webp" width="921" height="2000" loading="lazy" alt="New bartender form with the name Steve, the description 'Pours great Pinks' and the pub filled in automatically"></div>
+            <figcaption><strong>Add in seconds</strong><span>The pub fills itself in</span></figcaption>
+          </figure>
+          <figure>
+            <div class="phone"><img src="images/bartender-detail.webp" width="921" height="2000" loading="lazy" alt="Bartender profile for Carlos García at The Swan, with a description and a map"></div>
+            <figcaption><strong>Profiles</strong><span>Photo, notes and a map</span></figcaption>
+          </figure>
+          <figure>
+            <div class="phone"><img src="images/directory.webp" width="921" height="2000" loading="lazy" alt="Directory screen listing Amy Turner, a favourite, under The Watermans Arms"></div>
+            <figcaption><strong>Directory</strong><span>Everyone, by pub</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How it works.</h2>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <h3>Walk in</h3>
+            <p>Open Pourtrait and it works out which pub you're in.</p>
+          </div>
+          <div class="step">
+            <h3>Say hello</h3>
+            <p>Add the bartender's name, a photo if they're happy with it, and a note to jog your memory.</p>
+          </div>
+          <div class="step">
+            <h3>Come back</h3>
+            <p>Next time you visit, Pourtrait reminds you who's who before you reach the bar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section id="privacy">
+      <div class="wrap">
+        <div class="privacy-band">
+          <div class="shield" aria-hidden="true">
+            <svg width="42" height="42" viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5z" fill="none" stroke="#E8952B" stroke-width="2" stroke-linejoin="round"/><path d="M8.5 12l2.4 2.4L15.5 9.8" stroke="#E8952B" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <h2>Your list stays yours.</h2>
+            <p>The bartenders you save, their photos and your notes are stored on your iPhone and in your own private iCloud. They're never shared with other users or uploaded to our servers. Your location is used on your phone to find the pub you're in. The ad banner is provided by Google AdMob, which collects some data to show ads. The privacy policy explains what, and buying Remove Ads switches it off.</p>
+            <a href="privacy.htm">Read the privacy policy →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Questions.</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Is Pourtrait free?</summary>
+            <p>Yes. The app is free and supported by a single small banner advert. If you'd rather not see it, a one-off in-app purchase removes ads for good, on all your devices.</p>
+          </details>
+          <details>
+            <summary>Can other people see the bartenders I save?</summary>
+            <p>No. Your directory is private to you. It's stored in your own iCloud account, not in a shared database.</p>
+          </details>
+          <details>
+            <summary>What happens if I get a new phone?</summary>
+            <p>Sign in with the same Apple ID and open Pourtrait. Your bartenders and photos are restored from iCloud by themselves.</p>
+          </details>
+          <details>
+            <summary>Why does it ask for "Always" location?</summary>
+            <p>Only if you want arrival alerts while the app is closed. It lets your iPhone notice when you walk into a pub where you've saved bartenders. You can say no and still use everything else.</p>
+          </details>
+          <details>
+            <summary>What if it picks the wrong pub?</summary>
+            <p>Tap "Not here? Change pub" to choose from nearby pubs, search by name, or type the pub in yourself.</p>
+          </details>
+          <details>
+            <summary>Which iPhones does it work on?</summary>
+            <p>Any iPhone running iOS 17 or later. The Dynamic Island view needs an iPhone 14 Pro or newer; other models show the Live Activity on the Lock Screen.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="cta">
+      <div class="wrap">
+        <h2>Be the regular who<br>knows everyone.</h2>
+        <p>Pourtrait is coming soon to the App Store.</p>
+        <!-- TODO: same App Store link as above -->
+        <a class="store-badge" href="#" aria-label="Download Pourtrait on the App Store">
+          <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-3.4 14.6H6.4l1-1.8h2.2zm7.3-3.5H6.1v-1.7h3.3l2.8-4.9-.9-1.6 1.5-.8.4.8.4-.8 1.5.8-3.8 6.5h2.3zm1.7 3.5-1-1.8 2.6-.1.1 1.9zm.3-3.5h-2.4l-1-1.7h2.4z" fill="#000"/></svg>
+          <div><small>Download on the</small><span>App Store</span></div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Pourtrait. Please drink responsibly.</span>
+      <nav aria-label="Footer">
+        <a href="privacy.htm">Privacy</a>
+        <!-- TODO: add a support link; App Store Connect requires a support URL, e.g.
+        <a href="mailto:support@example.com">Support</a> -->
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
