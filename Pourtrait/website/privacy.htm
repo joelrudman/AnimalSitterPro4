@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy – Pourtrait</title>
+  <meta name="description" content="How the Pourtrait iPhone app handles your data: what stays on your phone, what goes to your private iCloud, and what our advertising partner collects.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Cpath d='M14 20h26v24a6 6 0 0 1-6 6H20a6 6 0 0 1-6-6z' fill='%23E8952B'/%3E%3Cpath d='M40 26h4a6 6 0 0 1 0 12h-4' stroke='%23E8952B' stroke-width='4' fill='none'/%3E%3C/svg%3E">
+
+  <style>
+    :root {
+      --bg: #000;
+      --surface: #1c1c1e;
+      --surface-2: #2c2c2e;
+      --text: #fff;
+      --body: #d1d1d6;
+      --muted: #a1a1a6;
+      --amber: #E8952B;
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--body);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--amber); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+    header.nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(0,0,0,.72);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; font-size: 19px; letter-spacing: -.2px; }
+    .brand:hover { text-decoration: none; }
+    .brand-icon { width: 30px; height: 30px; border-radius: 8px; background: var(--surface); display: grid; place-items: center; }
+    .back { color: var(--muted); font-size: 15px; }
+    .back:hover { color: var(--text); text-decoration: none; }
+
+    .layout { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 56px; padding: 64px 0 96px; }
+    .toc { position: sticky; top: 92px; align-self: start; font-size: 14px; }
+    .toc strong { display: block; color: var(--text); font-size: 13px; text-transform: uppercase; letter-spacing: .6px; margin-bottom: 10px; }
+    .toc ol { list-style: none; display: grid; gap: 6px; }
+    .toc a { color: var(--muted); }
+    .toc a:hover { color: var(--text); text-decoration: none; }
+
+    article { max-width: 720px; }
+    h1 { color: var(--text); font-size: clamp(38px, 5.4vw, 56px); line-height: 1.05; letter-spacing: -1.6px; font-weight: 800; }
+    .updated { color: var(--muted); font-size: 15px; margin-top: 12px; }
+    h2 { color: var(--text); font-size: 26px; letter-spacing: -.5px; line-height: 1.2; margin: 52px 0 14px; scroll-margin-top: 84px; }
+    h3 { color: var(--text); font-size: 19px; margin: 26px 0 8px; }
+    p, ul { margin-bottom: 14px; }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    li::marker { color: var(--amber); }
+    strong { color: var(--text); }
+
+    .summary { background: var(--surface); border-radius: var(--radius); padding: 26px 28px; margin: 32px 0 8px; }
+    .summary h2 { margin-top: 0; font-size: 21px; }
+    .summary ul { margin-bottom: 0; }
+
+    .table-wrap { overflow-x: auto; margin: 18px 0 18px; border-radius: 14px; border: 1px solid var(--surface-2); }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 560px; }
+    th, td { text-align: left; padding: 12px 14px; vertical-align: top; border-bottom: 1px solid var(--surface-2); }
+    th { color: var(--text); background: var(--surface); font-weight: 600; }
+    tr:last-child td { border-bottom: 0; }
+
+    .note { border-left: 3px solid var(--amber); padding: 4px 0 4px 16px; color: var(--muted); }
+
+    footer { border-top: 1px solid rgba(255,255,255,.08); padding: 32px 0 44px; color: var(--muted); font-size: 14px; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    footer nav { display: flex; gap: 22px; }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; gap: 0; padding-top: 40px; }
+      .toc { display: none; }
+    }
+    @media (max-width: 600px) {
+      .wrap { padding: 0 16px; }
+      body { font-size: 16px; }
+      .summary { padding: 22px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 6.5h11v11a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z" fill="#E8952B"/><path d="M15 9h2.2a2.8 2.8 0 0 1 0 5.6H15" stroke="#E8952B" stroke-width="2" fill="none"/></svg>
+        </span>
+        Pourtrait
+      </a>
+      <a class="back" href="index.html">← Back to home</a>
+    </div>
+  </header>
+
+  <main class="wrap layout">
+    <nav class="toc" aria-label="Contents">
+      <strong>Contents</strong>
+      <ol>
+        <li><a href="#who">Who we are</a></li>
+        <li><a href="#your-data">Bartenders you save</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#photos">Camera and photos</a></li>
+        <li><a href="#notifications">Notifications and Live Activities</a></li>
+        <li><a href="#ads">Advertising</a></li>
+        <li><a href="#purchases">In-app purchases</a></li>
+        <li><a href="#other">Other data</a></li>
+        <li><a href="#others">People you add</a></li>
+        <li><a href="#rights">Your choices and rights</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#changes">Changes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <article>
+      <h1>Privacy Policy</h1>
+      <!-- TODO: update this date whenever you change the policy -->
+      <p class="updated">Last updated: 6 November 2026</p>
+
+      <section class="summary" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">The short version</h2>
+        <ul>
+          <li>Pourtrait has <strong>no accounts and no servers of its own</strong>. We never receive the bartenders you save, their photos, your notes or your location.</li>
+          <li>What you save lives <strong>on your iPhone and in your own private iCloud</strong>, so it backs up and comes back on a new phone. Only you can see it.</li>
+          <li>Your location is used <strong>on your phone</strong> to work out which pub you're in. Searching for nearby pubs uses Apple Maps.</li>
+          <li>The free version shows a banner ad from <strong>Google AdMob</strong>, which collects some device and usage data to show ads. You choose how ads are personalised, and buying <strong>Remove Ads</strong> switches them off completely.</li>
+          <li>We don't sell your data, and we don't use any analytics or tracking tools of our own.</li>
+        </ul>
+      </section>
+
+      <h2 id="who">1. Who we are</h2>
+      <!-- TODO: put your name or company name and country here. -->
+      <p>Pourtrait ("the app", "we", "us") is an iPhone app published by <strong>[Your name or company]</strong>, based in <strong>[country]</strong>. This policy explains what data the app uses, why, and what control you have over it. It covers the Pourtrait app and this website.</p>
+      <p>For the data the app itself handles, almost all of it stays on your device or in your own iCloud account, out of our reach. The one place a third party receives data from the app is advertising, covered in <a href="#ads">section 6</a>.</p>
+
+      <h2 id="your-data">2. Bartenders you save</h2>
+      <p>When you add a bartender, the app stores:</p>
+      <ul>
+        <li>their name and the description or notes you write;</li>
+        <li>a photo, if you add one (resized to save space), plus a small thumbnail;</li>
+        <li>the pub you met them at: its name, address and map coordinates;</li>
+        <li>whether you've marked them as a favourite, and when you added or last edited them.</li>
+      </ul>
+      <p><strong>Where it's stored:</strong> on your iPhone, and synced through Apple's iCloud to your <strong>private CloudKit database</strong>. That's part of your own iCloud account, protected by your Apple ID. We, the developer, can't see or access it. Apple's <a href="https://www.apple.com/legal/privacy/" rel="noopener">Privacy Policy</a> and iCloud terms apply to data stored in iCloud.</p>
+      <p><strong>Why:</strong> so you can see your bartenders, and so they're backed up and restored if you reinstall the app or move to a new iPhone signed in to the same Apple ID.</p>
+      <p><strong>How long:</strong> until you delete it. Deleting a bartender in the app removes it from your phone and from iCloud. See <a href="#rights">section 10</a> to delete everything.</p>
+      <p>If you aren't signed in to iCloud, your data is kept on your iPhone only and isn't backed up.</p>
+
+      <h2 id="location">3. Location</h2>
+      <h3>While you're using the app</h3>
+      <p>With your permission ("While Using the App"), Pourtrait uses your location to work out which pub you're in and to show how far away each pub in your directory is. To find nearby pubs, or pubs you search for by name, the app sends a search to <strong>Apple Maps (MapKit)</strong> that includes your location. Apple processes these searches under its own <a href="https://www.apple.com/legal/privacy/data/en/apple-maps/" rel="noopener">Maps privacy terms</a>, which say Apple doesn't link them to your Apple ID.</p>
+
+      <h3>Arrival alerts (optional)</h3>
+      <p>If you turn on arrival alerts and allow <strong>"Always"</strong> location, your iPhone watches for when you arrive at pubs where you've saved bartenders, up to the 20 nearest. iOS does this on the device itself (this is called geofencing). When you arrive, the app shows a Live Activity or a notification listing the bartenders you know there.</p>
+      <p><strong>Your location is never sent to us</strong>, and the app doesn't keep a history of where you've been. The only places stored are the pubs you chose to save bartenders at, as described above.</p>
+      <p>You can change or withdraw location access at any time in <strong>Settings → Privacy &amp; Security → Location Services → Pourtrait</strong>. Without it, you can still pick pubs by hand.</p>
+
+      <h2 id="photos">4. Camera and photos</h2>
+      <p>The app uses the camera only when you tap <strong>Camera</strong> to take a bartender's photo. It uses only the photos you pick from your library; it can't see the rest of your library. Photos are stored as described in <a href="#your-data">section 2</a> and aren't sent anywhere else.</p>
+
+      <h2 id="notifications">5. Notifications and Live Activities</h2>
+      <p>Arrival notifications and Live Activities are created on your iPhone. They show the pub name and the names and small photos of bartenders you've saved there. To show the photos, the app copies small thumbnails into a storage area on your phone that only Pourtrait and its Lock Screen widget can read. No notification content passes through our servers, because we don't have any.</p>
+      <p>The app also uses Apple's push notification service silently in the background, purely so iCloud can tell your devices when your data has changed. These messages contain no personal content.</p>
+      <p>Bear in mind that notifications and Live Activities can be seen on your Lock Screen by anyone holding your phone. You can turn them off in the app's Settings, or in <strong>Settings → Notifications → Pourtrait</strong>.</p>
+
+      <h2 id="ads">6. Advertising</h2>
+      <p>The free version of Pourtrait shows one banner advert at the bottom of some screens. Ads are provided by <strong>Google AdMob</strong>, part of Google LLC, through the Google Mobile Ads SDK built into the app.</p>
+      <h3>What Google collects</h3>
+      <p>To show and measure ads and to prevent fraud, the Google Mobile Ads SDK collects information including:</p>
+      <ul>
+        <li>your IP address, which Google may use to estimate a general location such as your town;</li>
+        <li>device and app information, such as device model, operating system version and app version;</li>
+        <li>how you interact with ads, such as views and taps;</li>
+        <li>diagnostic information, such as crash and performance data from the ads SDK;</li>
+        <li>your device's advertising identifier (IDFA), <strong>only if you allow tracking</strong> (see below).</li>
+      </ul>
+      <p>The app does <strong>not</strong> give Google the bartenders you save, your photos, your notes, the pubs you visit or your precise GPS location.</p>
+      <p>Google acts as an independent controller of this data. See <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use its services</a> and <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a>.</p>
+
+      <h3>Your consent and choices</h3>
+      <ul>
+        <li><strong>UK, EEA and Switzerland:</strong> the first time you open the app, a consent form from Google lets you choose whether ads can be personalised. You can change your choice at any time in the app under <strong>Settings → Ad privacy choices</strong>.</li>
+        <li><strong>Tracking:</strong> iOS may ask whether Pourtrait can track your activity across other companies' apps and websites. If you choose <strong>Ask App Not to Track</strong>, the advertising identifier isn't shared and ads are less personalised. You can change this in <strong>Settings → Privacy &amp; Security → Tracking</strong>.</li>
+        <li><strong>No ads at all:</strong> buy <strong>Remove Ads</strong> in the app's Settings. Once you own it, the app stops loading the advertising SDK's ads altogether.</li>
+      </ul>
+      <p>Our legal basis for personalised advertising is your <strong>consent</strong>. For non-personalised ads, it's our <strong>legitimate interest</strong> in funding a free app.</p>
+
+      <h2 id="purchases">7. In-app purchases</h2>
+      <p>Purchases are handled entirely by Apple. We never receive your payment details, name or Apple ID. The app only checks with Apple whether your Apple ID owns Remove Ads, so it can switch ads off and restore the purchase on your other devices.</p>
+
+      <h2 id="other">8. Other data</h2>
+      <ul>
+        <li><strong>Settings:</strong> your in-app settings, such as whether arrival alerts are on, are stored on your iPhone only.</li>
+        <li><strong>Crash reports:</strong> if you've chosen to share analytics with app developers in <strong>Settings → Privacy &amp; Security → Analytics &amp; Improvements</strong>, Apple may give us anonymous crash reports. These don't include your saved data.</li>
+        <li><strong>No analytics or accounts:</strong> the app has no sign-up and contains no analytics or tracking tools other than the advertising SDK described above.</li>
+        <li><strong>This website:</strong> it has no cookies and no analytics. Like any website, our hosting provider may keep standard server logs, such as IP address and pages requested, for security and to keep the site running.</li>
+      </ul>
+
+      <h2 id="others">9. People you add</h2>
+      <p>Pourtrait stores information you choose to record about other people. Please be considerate: <strong>ask before taking someone's photo</strong>, and don't record anything you wouldn't be comfortable with them seeing.</p>
+      <p>Because each person's directory is private to them and stored in their own iCloud, we can't see or remove what someone has saved. If you're a bartender and want an entry about you removed, please ask the person who created it. They can delete it in the app at any time.</p>
+      <p class="note">Using the app for a purely personal reason, such as remembering people at your local, is generally treated as personal use. If you use Pourtrait for business purposes, you may have your own data-protection responsibilities.</p>
+
+      <h2 id="rights">10. Your choices and rights</h2>
+      <ul>
+        <li><strong>Edit or delete a bartender:</strong> open them in the app and choose Edit or Delete.</li>
+        <li><strong>Delete everything:</strong> delete the app, then remove its iCloud data in <strong>Settings → [your name] → iCloud → Manage Account Storage</strong> (or <strong>Manage Storage</strong>) <strong>→ Pourtrait → Delete Data</strong>.</li>
+        <li><strong>Get a copy:</strong> your data is in your own iCloud account. Apple lets you request a copy of your iCloud data at <a href="https://privacy.apple.com" rel="noopener">privacy.apple.com</a>.</li>
+        <li><strong>Permissions:</strong> location, camera, photos, notifications and tracking can each be turned off at any time in your iPhone's Settings.</li>
+        <li><strong>Advertising data:</strong> for data collected by Google, see <a href="https://myadcenter.google.com" rel="noopener">My Ad Center</a> and Google's privacy policy, or contact Google directly.</li>
+      </ul>
+      <p>If you're in the UK or EEA, you have rights under data protection law, including access, correction, deletion, objection and withdrawing consent. Because we hold no personal data about you on our own systems, most requests are handled directly in the app or with Apple or Google as described above. You can still contact us (<a href="#contact">section 13</a>), and you have the right to complain to your data protection authority. In the UK, that's the <a href="https://ico.org.uk/make-a-complaint/" rel="noopener">Information Commissioner's Office (ICO)</a>.</p>
+
+      <h2 id="children">11. Children</h2>
+      <p>Pourtrait is about pubs and bars and is intended for adults of legal drinking age in their country. It isn't directed at children, and we don't knowingly collect data from children.</p>
+
+      <h2 id="changes">12. Changes to this policy</h2>
+      <p>If the app starts handling data differently, we'll update this page and the date at the top. For significant changes, we'll also tell you in the app or in the App Store release notes.</p>
+
+      <h2 id="contact">13. Contact</h2>
+      <!-- TODO: replace with a real address you check. App Store Connect also needs a support URL or email. -->
+      <p>Questions about privacy? Email <a href="mailto:privacy@example.com">privacy@example.com</a>.</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Pourtrait. Please drink responsibly.</span>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="privacy.htm">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
